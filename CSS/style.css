@@ -19,6 +19,7 @@
 html {
     scrollbar-gutter: stable;
     /*overflow-y: scroll;*/
+    -webkit-text-size-adjust: 100%;
 }
 
 
@@ -421,12 +422,12 @@ body.legal {
     }
 
     .title {
-        font-size: 16px;
+        font-size: 20px;
         letter-spacing: 0.25em;
     }
 
     .title span {
-        font-size: 12px;
+        font-size: 16px;
         letter-spacing: 0.3em;
     }
 
@@ -436,7 +437,7 @@ body.legal {
     }
 
     .main-nav a {
-        font-size: 13px;
+        font-size: 16px;
         letter-spacing: 0.05em;
     }
 
