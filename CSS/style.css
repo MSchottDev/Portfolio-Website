@@ -224,49 +224,76 @@ body.landing {
     margin-bottom: 25px;
 }
 
+.hero-name {
+    font-family: "Poiret One", sans-serif;
+
+    font-size: clamp(18px, 3vw, 22px);
+    font-weight: 200;
+
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+
+    color: #ffffff;
+
+    margin-bottom: 18px;
+}
+
 /* =========================
    IHK BLOCK
 ========================= */
 
 .ihk-title {
-    margin: 25px 0;
+    margin: 18px 0;
 }
 
 .ihk-topline {
     display: flex;
     justify-content: center;
-    gap: 16px;
-    align-items: center;
+    align-items: baseline;
+    gap: 10px;
 }
 
 .ihk-badge {
     font-family: "Segoe UI", Arial, sans-serif;
-    font-weight: 200;
+
     font-style: italic;
+    font-weight: 500;
 
     color: #16a34a;
-    font-size: 28px;
+    font-size: 20px;
+
+    position: relative;
+    
 }
 
 .ihk-main {
-    font-size: 28px;
+    font-size: 19px;
     font-weight: 200;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.14em;
 }
 
 .ihk-divider {
     width: 100%;
-    max-width: 500px;
+    max-width: 380px;
     height: 1px;
 
-    margin: 10px auto;
+    margin: 4px auto 8px;
 
-    background: linear-gradient(to right, transparent, rgba(255,255,255,0.5), transparent);
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(255,255,255,0.45),
+        transparent
+    );
 }
 
 .ihk-subtitle {
-    color: #38bdf8;
-    letter-spacing: 0.4em;
+    color: #ffffff;
+
+    font-weight: 100;
+    font-size: 11px;
+
+    letter-spacing: 0.42em;
     text-transform: uppercase;
 }
 
@@ -428,7 +455,7 @@ body.legal {
 
     .title {
         font-size: 22px;
-        letter-spacing: 0.4em;
+        letter-spacing: 0.8em;
         
     }
 
