@@ -422,16 +422,20 @@ body.legal {
     .top-bar {
         padding: 10px 12px;
         gap: 8px;
+        align-items: flex-start;
+        text-align: left;
     }
 
     .title {
-        font-size: 20px;
-        letter-spacing: 0.25em;
+        font-size: 22px;
+        letter-spacing: 0.4em;
+        
     }
 
     .title span {
-        font-size: 16px;
-        letter-spacing: 0.3em;
+        font-size: 14px;
+        letter-spacing: 0.35em;
+        
     }
 
     .main-nav {
