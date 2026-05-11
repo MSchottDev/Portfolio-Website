@@ -414,6 +414,9 @@ body.legal {
 
 /*Smartphone*/
 @media (max-width: 480px) {
+    body {
+        background-attachment: scroll;
+    }
 
     /* HEADER */
     .top-bar {
