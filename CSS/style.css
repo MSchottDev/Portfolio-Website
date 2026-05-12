@@ -512,6 +512,7 @@ body.legal {
     .hero-content {
         padding: 20px 14px;
         border-radius: 16px;
+        flex-direction: column-reverse;
     }
 
     .hero-divider {
