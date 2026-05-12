@@ -422,6 +422,18 @@ body.landing {
         0 0 18px rgba(56, 189, 248, 0.14);
 }
 
+.newsletter-button:active {
+    transform: scale(0.98);
+
+    background: rgba(56, 189, 248, 0.18);
+
+    border-color: rgba(56, 189, 248, 0.85);
+
+    box-shadow:
+        0 0 22px rgba(56, 189, 248, 0.28),
+        inset 0 0 12px rgba(56, 189, 248, 0.18);
+}
+
 
 
 /* =========================
