@@ -20,7 +20,8 @@ html {
     -webkit-text-size-adjust: 100%;
 }
 
-html, body {
+html,
+body {
     background-color: #121417;
 }
 
@@ -28,15 +29,10 @@ body {
     font-family: Arial, sans-serif;
     min-height: 100vh;
 
-    background-image: url("../Images/bg.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    
-
     color: #ffffff;
     position: relative;
+
+    isolation: isolate;
 }
 
 body::before {
@@ -53,8 +49,11 @@ body::before {
             rgba(0, 0, 0, 0.72) 50%,
             rgba(0, 0, 0, 0.4) 100%
         ),
+        url("../Images/bg.jpg");
 
-        url("../Images/bg.jpg") center/cover no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
     z-index: -1;
 }
@@ -180,7 +179,7 @@ body.landing {
 .hero-section {
     width: 100%;
     min-height: 100vh;
-
+    flex-direction: column;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -200,21 +199,12 @@ body.landing {
 
     padding: 55px 40px;
 
-    background: rgba(20, 24, 31, 0.5);
-    backdrop-filter: blur(12px);
-
+    background: rgba(20, 24, 31, 0.2);
+    backdrop-filter: blur(1px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     
     border-radius: 22px;
-    box-shadow:
-    0 40px 100px rgba(0, 0, 0, 0.85),
-    0 20px 45px rgba(0, 0, 0, 0.65),
-
-    0 0 60px rgba(56, 189, 248, 0.12),
-
-    0 0 0 1px rgba(255,255,255,0.05),
-
-    inset 0 1px 0 rgba(255,255,255,0.08),
-    inset 0 -10px 20px rgba(0,0,0,0.22);
+    
 }
 
 .hero-left,
@@ -263,27 +253,30 @@ body.landing {
 .profile-image {
     width: 180px;
     height: 180px;
+
     object-fit: cover;
-    border: 2px solid rgba(255, 255, 255, 0.25);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 8%;
+
     margin-bottom: 25px;
-    box-shadow:
-        0 25px 60px rgba(0, 0, 0, 0.85),
-        0 10px 30px rgba(0, 0, 0, 0.6),
-        0 0 60px rgba(56, 189, 248, 0.5),
-        0 0 120px rgba(56, 189, 248, 0.25);
+
+    
 }
 
 .hero-name {
-    font-family: "Poiret One", sans-serif;
+    /*font-family: "Poiret One", sans-serif;*/
+    font-family: "Segoe UI", Arial, sans-serif;
 
     font-size: clamp(14px, 3vw, 18px);
-    font-weight: 200;
+    font-weight: 400;
 
     letter-spacing: 0.18em;
     text-transform: uppercase;
 
-    color: #ffffff;
+    color: white;
+    text-shadow:
+        0 0 4px rgba(255,255,255,0.12);
 
     margin-bottom: 0;
 }
@@ -348,6 +341,90 @@ body.landing {
 }
 
 /* =========================
+    NEWSLETTER
+============================*/
+
+.newsletter-preview {
+    margin-top: 80px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 18px;
+}
+
+.newsletter-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.newsletter-icon {
+    width: 32px;
+    height: 32px;
+
+    filter: brightness(0) invert(1);
+
+    opacity: 0.9;
+}
+
+.newsletter-title {
+    font-size: 15px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    color: #ffffff;
+}
+
+.newsletter-description {
+    max-width: 420px;
+
+    text-align: center;
+
+    font-size: 15px;
+    line-height: 1.7;
+
+    color: rgba(255,255,255,0.65);
+}
+
+.newsletter-button {
+    padding: 12px 28px;
+
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 10px;
+
+    background: rgba(255,255,255,0.03);
+
+    color: #ffffff;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    font-size: 13px;
+    letter-spacing: 0.14em;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.newsletter-button:hover {
+    
+
+    background: rgba(255,255,255,0.06);
+
+    border-color: rgba(56, 189, 248, 0.45);
+
+    box-shadow:
+        0 0 18px rgba(56, 189, 248, 0.14);
+}
+
+
+
+/* =========================
    FOOTER
 ========================= */
 
@@ -366,7 +443,7 @@ body.landing {
     background: linear-gradient(
         to right,
         rgba(15, 23, 42, 0.45) 0%,
-        rgba(30, 41, 59, 1.0) 50%,
+        rgb(15, 23, 42) 50%,
         rgba(15, 23, 42, 0.45) 100%
     );
 }
@@ -427,8 +504,8 @@ body.legal {
 
     text-align: center;
 
-    background: rgba(20, 24, 31, 0.78);
-    backdrop-filter: blur(12px);
+    background: rgba(20, 24, 31, 0.5);
+    backdrop-filter: blur(2px);
 
     border: 2px solid rgba(255,255,255,0.12);
     border-radius: 14px;
