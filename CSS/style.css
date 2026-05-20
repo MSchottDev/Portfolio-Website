@@ -54,8 +54,28 @@ body::before {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
+    animation:
+    bg-fade 1s ease forwards,
+    bg-zoom 1s ease-in-out forwards;
     z-index: -1;
+}
+@keyframes bg-zoom {
+    0% {
+        transform: scale(1);
+    }
+    
+    100% {
+        transform: scale(1.02);
+    }
+}
+@keyframes bg-fade {
+    from {
+        filter: brightness(0.05);
+    }
+
+    to {
+        filter: brightness(0.4);
+    }
 }
 
 /* =========================
@@ -72,16 +92,16 @@ body::before {
 
     background: linear-gradient(
         to right,
-        rgba(15, 23, 42, 0.75) 0%,
-        rgba(15, 23, 42, 0.92) 10%,
-        rgba(15, 23, 42, 0.98) 30%,
-        rgba(15, 23, 42, 0.92) 50%,
-        rgba(15, 23, 42, 0.75) 80%
+        rgba(15, 23, 42, 0.35) 0%,
+        rgba(15, 23, 42, 0.42) 10%,
+        rgba(15, 23, 42, 0.48) 30%,
+        rgba(15, 23, 42, 0.42) 50%,
+        rgba(15, 23, 42, 0.35) 80%
     );
 
     display: flex;
     align-items: center;
-
+    
     z-index: 10;
 }
 
@@ -259,7 +279,7 @@ body.landing {
     border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 8%;
 
-    margin-bottom: 25px;
+    margin-bottom: 5px;
 
     
 }
@@ -268,8 +288,8 @@ body.landing {
     /*font-family: "Poiret One", sans-serif;*/
     font-family: "Segoe UI", Arial, sans-serif;
 
-    font-size: clamp(14px, 3vw, 18px);
-    font-weight: 400;
+    font-size: clamp(12px, 3vw, 18px);
+    font-weight: 100;
 
     letter-spacing: 0.18em;
     text-transform: uppercase;
@@ -278,7 +298,7 @@ body.landing {
     text-shadow:
         0 0 4px rgba(255,255,255,0.12);
 
-    margin-bottom: 0;
+    margin-bottom: 10;
 }
 
 /* =========================
@@ -302,13 +322,13 @@ body.landing {
     font-weight: 500;
 
     color: #16a34a;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .ihk-main {
-    font-size: 22px;
+    font-size: 15px;
     font-weight: 200;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.3em;
 }
 
 .ihk-divider {
@@ -330,14 +350,133 @@ body.landing {
 }
 
 .ihk-subtitle {
+    text-align: center;
     font-weight: 80;
-    font-size: 14px;
+    font-size: 10px;
     letter-spacing: 0.42em;
     text-transform: uppercase;
 }
 
 .hero-text {
     margin-top: 10px;
+}
+
+/* =========================
+   HERO BRANDING
+========================= */
+
+.hero-branding {
+    margin-top: 22px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 18px;
+
+    text-align: center;
+}
+
+/* =========================
+   Hauptbezeichnung
+========================= */
+
+.hero-role {
+    font-size: 22px;
+    font-weight: 300;
+
+    line-height: 1.4;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 10px rgba(255,255,255,0.08);
+}
+
+/* =========================
+   Tech Stack
+========================= */
+
+.hero-stack {
+    max-width: 440px;
+
+    font-size: 12px;
+    line-height: 1.8;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    color: rgba(255,255,255,0.62);
+}
+
+/* =========================
+   Logo Row
+========================= */
+
+.hero-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 30px;
+
+    margin-top: 4px;
+}
+
+/* =========================
+   Base Logo
+========================= */
+
+.hero-logo {
+    object-fit: contain;
+
+    opacity: 0.78;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease,
+        filter 0.25s ease;
+}
+
+/* =========================
+   Einzelne Logos
+========================= */
+
+/* ASP.NET Core */
+.logo-aspnet {
+    width: 64px;
+    height: auto;
+}
+
+/* Active Directory */
+.logo-ad {
+    width: 110px;
+    height: auto;
+    transform: translateY(8px);
+    opacity: 0.88;
+}
+
+/* Azure */
+.logo-azure {
+    width: 84px;
+    height: auto;
+
+    opacity: 0.82;
+}
+
+/* =========================
+   Hover
+========================= */
+
+.hero-logo:hover {
+    opacity: 1;
+
+    /*transform: translateY(-2px);*/
+
+    filter:
+        drop-shadow(0 0 10px rgba(56, 189, 248, 0.22));
 }
 
 /* =========================
@@ -454,9 +593,9 @@ body.landing {
 
     background: linear-gradient(
         to right,
-        rgba(15, 23, 42, 0.45) 0%,
-        rgb(15, 23, 42) 50%,
-        rgba(15, 23, 42, 0.45) 100%
+        rgba(15, 23, 42, 0.25) 0%,
+        rgba(15, 23, 42, 0.5) 50%,
+        rgba(15, 23, 42, 0.25) 100%
     );
 }
 
@@ -631,5 +770,155 @@ body.legal {
 
     .footer-right {
         justify-self: center;
+    }
+}
+
+
+
+
+
+/* =========================
+   ABOUT SECTION WRAPPER
+========================= */
+
+.about-section {
+    width: 100%;
+    padding: 140px 40px 120px;
+
+    display: flex;
+    justify-content: center;
+}
+
+/* =========
+   MAIN CARD 
+=========== */
+
+.about-main-card {
+    width: 100%;
+    max-width: 1400px;
+
+    padding: 60px 50px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 60px;
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.about-intro {
+    text-align: left;
+}
+
+.about-title {
+    font-size: 34px;
+    font-weight: 300;
+    text-align: left;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    margin-bottom: 24px;
+}
+
+.about-text {
+    max-width: 900px;
+    text-align: left;
+    margin: 0 auto 14px auto;
+
+    font-size: 15px;
+    line-height: 1.8;
+
+    color: rgba(255,255,255,0.75);
+}
+
+/* =========================
+   GRID
+========================= */
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 28px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.about-card {
+    padding: 40px 28px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    gap: 20px;
+
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 14px;
+
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(56, 189, 248, 0.35);
+}
+
+/* =========================
+   LOGOS
+========================= */
+
+.about-logo{
+    width: 80px;
+    /*height: auto;*/
+
+    object-fit: contain;
+
+    opacity: 0.9;
+
+    filter: drop-shadow(0 0 6px rgba(255,255,255,0.08));
+}
+
+/* =========================
+   CARD TEXT
+========================= */
+
+.about-card h2 {
+    font-size: 20px;
+    font-weight: 300;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.about-card p {
+    font-size: 13px;
+    line-height: 1.7;
+
+    color: rgba(255,255,255,0.70);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-main-card {
+        padding: 40px 20px;
     }
 }
