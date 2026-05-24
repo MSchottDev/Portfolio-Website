@@ -852,8 +852,21 @@ body.legal {
 /* =========================
    Base Logo (für ALLE Seiten)
 ========================= */
+.hero-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 4px;
+}
+
+
 .logo {
     object-fit: contain;
+    width: calc(var(--logo-size) * var(--logo-scale, 1));
+    height: auto;
+    opacity: 0.7;
+    filter: grayscale(50%);
 
     transition:
         opacity 0.25s ease,
@@ -861,32 +874,22 @@ body.legal {
         filter 0.25s ease;
 }
 
-/* =========================
-   HERO Layout (Index)
-========================= */
-.hero-logos {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.hero-logo {
+    --logo-size: 60px;
+    
 
-    gap: 30px;
-    margin-top: 4px;
+    
+}
+.about-logo {
+    --logo-size: 100px;
+    
+
+    
 }
 
-/* Hero-spezifische Optik */
-.hero-logos .logo {
-    opacity: 0.78;
-}
 
-/* =========================
-   ABOUT Kontext
-========================= */
-.about-card .logo {
-    /*width: 80px;*/
-    opacity: 0.9;
 
-    filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.08));
-}
+
 
 /* =========================
    Einzelne Logos (Asset-Tuning)
@@ -894,19 +897,18 @@ body.legal {
 
 /* ASP.NET Core */
 .logo-aspnet {
-    width: 64px;
+    --logo-scale: 0.8;
+
 }
 
 /* Active Directory */
 .logo-ad {
-    width: 115px;
-    opacity: 0.88;
+    --logo-scale: 1.5;
 }
 
 /* Azure */
 .logo-azure {
-    width: 84px;
-    opacity: 0.82;
+    --logo-scale: 1.1;
 }
 
 /* =========================
