@@ -846,30 +846,14 @@ body.legal {
 
 
 /*===============================
-Ab hier erst mal ALLE Logos, index.html und about.html
+   LOGOS (GLOBAL COMPONENT)
 =================================*/
-/* =========================
-   Logo Row
-========================= */
-
-.hero-logos {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 30px;
-
-    margin-top: 4px;
-}
 
 /* =========================
-   Base Logo
+   Base Logo (für ALLE Seiten)
 ========================= */
-
-.hero-logo {
+.logo {
     object-fit: contain;
-
-    opacity: 0.78;
 
     transition:
         opacity 0.25s ease,
@@ -878,58 +862,57 @@ Ab hier erst mal ALLE Logos, index.html und about.html
 }
 
 /* =========================
-   Einzelne Logos
+   HERO Layout (Index)
+========================= */
+.hero-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 30px;
+    margin-top: 4px;
+}
+
+/* Hero-spezifische Optik */
+.hero-logos .logo {
+    opacity: 0.78;
+}
+
+/* =========================
+   ABOUT Kontext
+========================= */
+.about-card .logo {
+    /*width: 80px;*/
+    opacity: 0.9;
+
+    filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.08));
+}
+
+/* =========================
+   Einzelne Logos (Asset-Tuning)
 ========================= */
 
 /* ASP.NET Core */
 .logo-aspnet {
     width: 64px;
-    height: auto;
 }
 
 /* Active Directory */
 .logo-ad {
-    width: 60px;
-    height: auto;
-    /*transform: translateY(8px);*/
+    width: 210px;
     opacity: 0.88;
 }
 
 /* Azure */
 .logo-azure {
     width: 84px;
-    height: auto;
-
     opacity: 0.82;
 }
 
 /* =========================
-   Hover
+   Hover (global korrekt)
 ========================= */
-
-.hero-logo:hover {
+.logo:hover {
     opacity: 1;
-
-    /*transform: translateY(-2px);*/
-
-    filter:
-        drop-shadow(0 0 10px rgba(56, 189, 248, 0.22));
-}
-
-/*==========================
-   Logos der about.html
-===========================*/
-/* =========================
-   LOGOS
-========================= */
-
-.about-logo{
-    width: 80px;
-    /*height: auto;*/
-
-    object-fit: contain;
-
-    opacity: 0.9;
-
-    filter: drop-shadow(0 0 6px rgba(255,255,255,0.08));
+    filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.22));
 }
