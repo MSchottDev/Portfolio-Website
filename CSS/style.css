@@ -411,73 +411,7 @@ body.landing {
     color: rgba(255,255,255,0.62);
 }
 
-/* =========================
-   Logo Row
-========================= */
 
-.hero-logos {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 30px;
-
-    margin-top: 4px;
-}
-
-/* =========================
-   Base Logo
-========================= */
-
-.hero-logo {
-    object-fit: contain;
-
-    opacity: 0.78;
-
-    transition:
-        opacity 0.25s ease,
-        transform 0.25s ease,
-        filter 0.25s ease;
-}
-
-/* =========================
-   Einzelne Logos
-========================= */
-
-/* ASP.NET Core */
-.logo-aspnet {
-    width: 64px;
-    height: auto;
-}
-
-/* Active Directory */
-.logo-ad {
-    width: 110px;
-    height: auto;
-    transform: translateY(8px);
-    opacity: 0.88;
-}
-
-/* Azure */
-.logo-azure {
-    width: 84px;
-    height: auto;
-
-    opacity: 0.82;
-}
-
-/* =========================
-   Hover
-========================= */
-
-.hero-logo:hover {
-    opacity: 1;
-
-    /*transform: translateY(-2px);*/
-
-    filter:
-        drop-shadow(0 0 10px rgba(56, 189, 248, 0.22));
-}
 
 /* =========================
     NEWSLETTER
@@ -874,20 +808,7 @@ body.legal {
     border-color: rgba(56, 189, 248, 0.35);
 }
 
-/* =========================
-   LOGOS
-========================= */
 
-.about-logo{
-    width: 80px;
-    /*height: auto;*/
-
-    object-fit: contain;
-
-    opacity: 0.9;
-
-    filter: drop-shadow(0 0 6px rgba(255,255,255,0.08));
-}
 
 /* =========================
    CARD TEXT
@@ -921,4 +842,94 @@ body.legal {
     .about-main-card {
         padding: 40px 20px;
     }
+}
+
+
+/*===============================
+Ab hier erst mal ALLE Logos, index.html und about.html
+=================================*/
+/* =========================
+   Logo Row
+========================= */
+
+.hero-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 30px;
+
+    margin-top: 4px;
+}
+
+/* =========================
+   Base Logo
+========================= */
+
+.hero-logo {
+    object-fit: contain;
+
+    opacity: 0.78;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease,
+        filter 0.25s ease;
+}
+
+/* =========================
+   Einzelne Logos
+========================= */
+
+/* ASP.NET Core */
+.logo-aspnet {
+    width: 64px;
+    height: auto;
+}
+
+/* Active Directory */
+.logo-ad {
+    width: 60px;
+    height: auto;
+    /*transform: translateY(8px);*/
+    opacity: 0.88;
+}
+
+/* Azure */
+.logo-azure {
+    width: 84px;
+    height: auto;
+
+    opacity: 0.82;
+}
+
+/* =========================
+   Hover
+========================= */
+
+.hero-logo:hover {
+    opacity: 1;
+
+    /*transform: translateY(-2px);*/
+
+    filter:
+        drop-shadow(0 0 10px rgba(56, 189, 248, 0.22));
+}
+
+/*==========================
+   Logos der about.html
+===========================*/
+/* =========================
+   LOGOS
+========================= */
+
+.about-logo{
+    width: 80px;
+    /*height: auto;*/
+
+    object-fit: contain;
+
+    opacity: 0.9;
+
+    filter: drop-shadow(0 0 6px rgba(255,255,255,0.08));
 }
