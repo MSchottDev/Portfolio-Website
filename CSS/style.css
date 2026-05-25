@@ -219,8 +219,8 @@ body.landing {
 
     padding: 55px 40px;
 
-    background: rgba(20, 24, 31, 0.2);
-    backdrop-filter: blur(1px);
+    /*background: rgba(20, 24, 31, 0.2);
+    backdrop-filter: blur(1px);*/
     border: 1px solid rgba(255, 255, 255, 0.25);
     
     border-radius: 22px;
@@ -795,7 +795,7 @@ body.legal {
 
     gap: 20px;
 
-    background: rgba(255,255,255,0.02);
+    /*background: rgba(255,255,255,0.02);*/
     border: 1px solid rgba(255,255,255,0.10);
     border-radius: 14px;
 
@@ -917,4 +917,73 @@ body.legal {
 .logo:hover {
     opacity: 1;
     filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.22));
+}
+
+/*Überarbeitung der About-Seite*/
+/* =========================
+   ABOUT CONTAINER
+========================= */
+
+.about-container {
+    width: 100%;
+    max-width: 1400px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 40px;
+}
+
+/* =========================
+   INTRO CARD
+========================= */
+
+.about-intro-card {
+    width: 100%;
+    max-width: 1400px;
+
+    padding: 50px 50px;
+}
+
+/* =========================
+   ABOUT TEXT
+========================= */
+
+.about-text {
+    max-width: 100%;
+}
+
+/* Klasse Glas für allg. Eigenschaft für Cards die diesen Effekt haben sollen*/
+.glass {
+    /*background: rgba(20, 24, 31, 0.2);*/
+    backdrop-filter: blur(0.0px);
+    -webkit-backdrop-filter: blur(0.0px);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 16px;
+
+    transition:
+        backdrop-filter 0.35s ease,
+        background 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease,
+        transform 0.25s ease;
+}
+.glass:hover {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    background: rgba(20, 24, 31, 0.32);
+
+    border-color: rgba(56, 189, 248, 0.25);
+
+    box-shadow:
+        0 0 18px rgba(56, 189, 248, 0.10);
+
+    
+}
+.glass:hover .logo {
+    opacity: 1;
+    filter: grayscale(0%) brightness(1.2) drop-shadow(0 0 10px rgba(56, 189, 248, 0.25));
+    /*transform: scale(1.05);*/
 }
