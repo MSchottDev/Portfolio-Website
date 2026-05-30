@@ -808,6 +808,12 @@ body.legal {
     border-color: rgba(56, 189, 248, 0.35);
 }
 
+/* links inh den aboutcards ohne Linkunterstreichung*/
+a.about-card {
+    text-decoration: none;
+    color: inherit;
+}
+
 
 
 /* =========================
@@ -828,6 +834,8 @@ body.legal {
 
     color: rgba(255,255,255,0.70);
 }
+
+
 
 /* =========================
    RESPONSIVE
@@ -987,3 +995,11 @@ body.legal {
     filter: grayscale(0%) brightness(1.2) drop-shadow(0 0 10px rgba(56, 189, 248, 0.25));
     /*transform: scale(1.05);*/
 }
+
+
+/* Backlink*/
+.back-link {
+    align-self: center;
+}
+
+
