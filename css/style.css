@@ -907,24 +907,24 @@ a.about-card {
 
 /* =========================
    Einzelne Logos (Asset-Tuning)
-========================= 
+=========================*/ 
 
-/* ASP.NET Core 
+ ASP.NET Core 
 .logo-aspnet {
     --logo-scale: 0.8;
 
 }
 
-/* Active Directory 
+ Active Directory 
 .logo-ad {
     --logo-scale: 1.5;
 }
 
-/* Azure 
+ Azure 
 .logo-azure {
     --logo-scale: 1.1;
 }
-*/
+
 
 
 /* =========================
