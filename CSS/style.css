@@ -867,6 +867,10 @@ a.about-card {
     gap: 30px;
     margin-top: 4px;
 }
+/*nur zum testen*/
+.hero-logos img{
+    border:1px solid red;
+}
 
 
 .logo {
@@ -883,11 +887,9 @@ a.about-card {
         filter 0.25s ease;*/
 
 
-    /*nur zum testen*/
-    .hero-logos img{
-    border:1px solid red;
-    }
+   
 }
+
 
 .hero-logo {
     --logo-size: 60px;
