@@ -861,7 +861,7 @@ a.about-card {
    Base Logo (für ALLE Seiten)
 ========================= */
 .hero-logos {
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: center;
     gap: 30px;
@@ -869,6 +869,8 @@ a.about-card {
 }
 /*nur zum testen*/
 .hero-logos img{
+    display: inline-block;
+    margin: 0 15px;
     border:1px solid red;
 }
 
