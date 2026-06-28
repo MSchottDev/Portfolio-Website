@@ -871,15 +871,16 @@ a.about-card {
 
 .logo {
     object-fit: contain;
-    width: calc(var(--logo-size) * var(--logo-scale, 1));
+    /*width: calc(var(--logo-size) * var(--logo-scale, 1));*/
+    width: 40px;
     height: auto;
-    opacity: 0.7;
+    /*opacity: 0.7;*/
     filter: grayscale(50%);
 
-    transition:
+    /*transition:
         opacity 0.25s ease,
         transform 0.25s ease,
-        filter 0.25s ease;
+        filter 0.25s ease;*/
 }
 
 .hero-logo {
