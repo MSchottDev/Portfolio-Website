@@ -868,10 +868,12 @@ a.about-card {
     margin-top: 4px;
 }
 /*nur zum testen*/
-.hero-logos img{
-    display: inline-block;
-    margin: 0 15px;
-    border:1px solid red;
+.hero-logos img {
+    width: 40px !important;
+    height: 40px !important;
+    display: block;
+    object-fit: contain;
+    border: 1px solid red;
 }
 
 
