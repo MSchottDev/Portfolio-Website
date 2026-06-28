@@ -881,6 +881,12 @@ a.about-card {
         opacity 0.25s ease,
         transform 0.25s ease,
         filter 0.25s ease;*/
+
+
+    /*nur zum testen*/
+    .hero-logos img{
+    border:1px solid red;
+    }
 }
 
 .hero-logo {
