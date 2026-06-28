@@ -907,20 +907,22 @@ a.about-card {
 
 /* =========================
    Einzelne Logos (Asset-Tuning)
+
+   DAS HIER FÜHRT ZU DEM ICON BUG UNTER GOOGLE CHROME !!!
 =========================*/ 
 
- ASP.NET Core 
+ 
 .logo-aspnet {
     --logo-scale: 0.8;
 
 }
 
- Active Directory 
+
 .logo-ad {
     --logo-scale: 1.5;
 }
 
- Azure 
+
 .logo-azure {
     --logo-scale: 1.1;
 }
