@@ -49,7 +49,7 @@ body::before {
             rgba(0, 0, 0, 0.72) 50%,
             rgba(0, 0, 0, 0.4) 100%
         ),
-        url("../Images/bg.jpg");
+        url("../images/bg.jpg");
 
     background-size: cover;
     background-position: center;
