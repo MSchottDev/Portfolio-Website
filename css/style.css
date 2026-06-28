@@ -861,20 +861,13 @@ a.about-card {
    Base Logo (für ALLE Seiten)
 ========================= */
 .hero-logos {
-    display: block;
+    display: flex;
     align-items: center;
     justify-content: center;
     gap: 30px;
     margin-top: 4px;
 }
-/*nur zum testen*/
-.hero-logos img {
-    width: 40px !important;
-    height: 40px !important;
-    display: block;
-    object-fit: contain;
-    border: 1px solid red;
-}
+
 
 
 .logo {
