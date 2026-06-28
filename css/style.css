@@ -913,18 +913,18 @@ a.about-card {
 
  
 .logo-aspnet {
-    --logo-scale: 0.8;
+    --logo-scale: 0.5;
 
 }
 
 
 .logo-ad {
-    --logo-scale: 1.5;
+    --logo-scale: 1.0;
 }
 
 
 .logo-azure {
-    --logo-scale: 1.1;
+    --logo-scale: 1.5;
 }
 
 
