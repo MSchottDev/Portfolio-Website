@@ -524,7 +524,7 @@ body.landing {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
-
+    text-decoration: none;
     background: linear-gradient(
         to right,
         rgba(15, 23, 42, 0.25) 0%,
