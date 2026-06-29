@@ -542,7 +542,7 @@ body.landing {
 
 .footer-links a {
     color: #ffffff;
-    text-decoration: none;
+    color: rgba(255, 255, 255, 0.75);
 }
 
 .divider {
@@ -553,6 +553,10 @@ body.landing {
 
 .footer-right {
     justify-self: end;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.footer-links a:hover {
     color: #ffffff;
 }
 
