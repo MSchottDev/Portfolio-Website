@@ -35,21 +35,75 @@
 
 </header>
 
-<main class="hero-section">
+<main class="contact-section">
 
-    <div class="hero-content">
+    <section class="contact-card glass">
 
-        
+        <h1 class="contact-title">
+            Kontakt
+        </h1>
 
-        
-
-        <p>
-            Inhalt "Kontakt"
+        <p class="contact-intro">
+            Sie haben eine Frage oder möchten mit mir in Kontakt treten?
+            Schreiben Sie mir gerne eine Nachricht.
         </p>
 
-        
 
-    </div>
+        <form class="contact-form">
+
+            <div class="form-group">
+                <label for="name">
+                    Name
+                </label>
+
+                <input 
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Ihr Name">
+            </div>
+
+
+            <div class="form-group">
+                <label for="email">
+                    E-Mail
+                </label>
+
+                <input 
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Ihre E-Mail-Adresse">
+            </div>
+
+
+            <div class="form-group">
+                <label for="message">
+                    Nachricht
+                </label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="6"
+                    placeholder="Ihre Nachricht">
+                </textarea>
+            </div>
+
+
+            <button class="contact-button" type="submit">
+                Senden
+            </button>
+
+        </form>
+
+
+        <div class="contact-success">
+            Ich habe Ihre Nachricht erhalten.
+        </div>
+
+
+    </section>
 
 </main>
 

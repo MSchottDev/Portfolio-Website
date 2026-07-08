@@ -11,6 +11,27 @@
     padding: 0;
 }
 
+/* FORM FILL DEFAULTS*/
+:root {
+    color-scheme: dark;
+}
+
+
+/* normale Felder */
+.form-group input,
+.form-group textarea {
+    background: rgba(255,255,255,0.04);
+    color: white;
+}
+
+
+/* Chrome / Edge Autofill */
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+    -webkit-text-fill-color: white;
+    -webkit-box-shadow: 0 0 0 1000px rgba(20,24,31,0.95) inset;
+}
+
 /* =========================
    GLOBAL
 ========================= */
@@ -863,9 +884,7 @@ a.about-card {
    LOGOS (GLOBAL COMPONENT)
 =================================*/
 
-/* =========================
-   Base Logo (für ALLE Seiten)
-========================= */
+
 .hero-logos {
     display: flex;
     align-items: center;
@@ -874,73 +893,47 @@ a.about-card {
     margin-top: 4px;
 }
 
-
-
 .logo {
-    object-fit: contain;
-    /*width: calc(var(--logo-size) * var(--logo-scale, 1));*/
-    width: 40px;
+    --logo-size: 40px;      /* Standardgröße */
+    --logo-scale: 1;        /* individuelles Logo */
+
+    width: calc(var(--logo-size) * var(--logo-scale));
     height: auto;
-    /*opacity: 0.7;*/
-    /*filter: grayscale(50%);*/
-    filter: none !important;
-    /*transition:
-        opacity 0.25s ease,
-        transform 0.25s ease,
-        filter 0.25s ease;*/
+    object-fit: contain;
 
+    opacity: 0.7;
+    filter: grayscale(50%);
 
-   
+    transition:
+        opacity .25s ease,
+        transform .25s ease,
+        filter .25s ease;
 }
 
-
-.hero-logo {
-    --logo-size: 60px;
-    
-
-    
-}
-.about-logo {
-    --logo-size: 100px;
-    
-
-    
+.logo:hover {
+    opacity: 1;
+    filter: grayscale(0%)
+            drop-shadow(0 0 10px rgba(56,189,248,.22));
 }
 
-
-
-
-
-/* =========================
-   Einzelne Logos (Asset-Tuning)
-
-   DAS HIER FÜHRT ZU DEM ICON BUG UNTER GOOGLE CHROME !!!
-=========================*/ 
-
- 
 .logo-aspnet {
-    --logo-scale: 0.5;
-
-}
-
-
-.logo-ad {
     --logo-scale: 1.0;
 }
 
-
-.logo-azure {
-    --logo-scale: 1.5;
+.logo-ad {
+    --logo-scale: 1.8;
 }
 
+.logo-azure {
+    --logo-scale: 1.8;
+}
 
+.hero-logo {
+    --logo-size: 60px;
+}
 
-/* =========================
-   Hover (global korrekt)
-========================= */
-.logo:hover {
-    opacity: 1;
-    /*filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.22));*/
+.about-logo {
+    --logo-size: 72px;
 }
 
 /*Überarbeitung der About-Seite*/
@@ -1016,6 +1009,232 @@ a.about-card {
 /* Backlink*/
 .back-link {
     align-self: center;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 120px 20px 100px;
+}
+
+
+.contact-card {
+
+    width: 100%;
+    max-width: 600px;
+
+    padding: 50px 45px;
+
+    text-align: center;
+
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.contact-title {
+
+    font-size: 32px;
+    font-weight: 300;
+
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+}
+
+
+.contact-intro {
+
+    color: rgba(255,255,255,0.65);
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    margin-bottom: 35px;
+}
+
+
+
+/* =========================
+   FORM
+========================= */
+
+.contact-form {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+
+    text-align: left;
+}
+
+
+.form-group {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.form-group label {
+
+    font-size: 12px;
+
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+    color: rgba(255,255,255,0.65);
+}
+
+
+
+.form-group input,
+.form-group textarea {
+
+    width: 100%;
+
+    padding: 12px 14px;
+
+    background: rgba(255,255,255,0.04);
+
+    border: 1px solid rgba(255,255,255,0.18);
+
+    border-radius: 8px;
+
+    color: #ffffff;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color .25s ease,
+        background .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.form-group textarea {
+
+    resize: vertical;
+
+    min-height: 140px;
+}
+
+
+
+/* =========================
+   INPUT HOVER / FOCUS
+========================= */
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+
+    border-color: rgba(56,189,248,0.55);
+
+    background:
+        rgba(255,255,255,0.06);
+
+    box-shadow:
+        0 0 15px rgba(56,189,248,0.12);
+}
+
+
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.contact-button {
+
+    margin-top: 15px;
+
+    padding: 12px 30px;
+
+    align-self: center;
+
+
+    background:
+        rgba(255,255,255,0.04);
+
+    border:
+        1px solid rgba(255,255,255,0.18);
+
+    border-radius: 10px;
+
+
+    color: #ffffff;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.15em;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+
+    transition:
+
+        background .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
+}
+
+
+
+.contact-button:hover {
+
+    background:
+        rgba(255,255,255,0.08);
+
+
+    border-color:
+        rgba(56,189,248,0.45);
+
+
+    box-shadow:
+
+        0 0 18px rgba(56,189,248,0.18);
+}
+
+
+
+/* =========================
+   SUCCESS MESSAGE
+========================= */
+
+.contact-success {
+
+    display: none;
+
+    margin-top: 30px;
+
+    color:
+        rgba(255,255,255,0.85);
+
+    font-size: 14px;
+
+    letter-spacing: 0.08em;
 }
 
 
