@@ -1,0 +1,46 @@
+name: GitHub Newsletter
+
+on:
+  workflow_dispatch:
+    inputs:
+
+      title:
+        description: "Titel des Newsletter-Beitrags"
+        required: true
+        type: string
+
+      repo_name:
+        description: "Name des GitHub-Repositories"
+        required: true
+        type: string
+
+      description:
+        description: "Beschreibung des Projekts"
+        required: true
+        type: string
+
+      repo_link:
+        description: "Link zum GitHub-Repository"
+        required: true
+        type: string
+
+
+jobs:
+  send-newsletter:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Newsletter senden
+        run: |
+          curl --fail-with-body \
+            -X POST \
+            "https://app.newsletter.mschott.dev/api/newsletter/send" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d '{
+              "title": ${{ toJSON(inputs.title) }},
+              "repoName": ${{ toJSON(inputs.repo_name) }},
+              "description": ${{ toJSON(inputs.description) }},
+              "repoLink": ${{ toJSON(inputs.repo_link) }}
+            }'
