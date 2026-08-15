@@ -7,10 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="SensorTest – Projekt von Matthias Schott">
+          content="Python-Sensor-Testsystem mit PyQt5, automatisierter Sensorerkennung, Metadatenauswertung, Distanz- und Amplitudentests sowie Testreports – IHK-Facharbeit von Matthias Schott">
 
     <link rel="stylesheet" href="css/style.css">
+
     <link rel="stylesheet" href="css/project-detail.css">
+
+    <script src="js/gallery.js" defer></script>
 
     <link rel="preload"
           href="images/bg.jpg"
@@ -19,11 +22,11 @@
 
     <link rel="icon" href="images/favicon.ico">
 
-    <title>SensorTest – Matthias Schott</title>
+    <title>Sensor-Testsystem – Matthias Schott</title>
 </head>
 
 
-<body>
+<body class="landing">
 
 
 <header class="top-bar">
@@ -43,8 +46,7 @@
             Über mich
         </a>
 
-        <a href="projects.html"
-           class="active">
+        <a href="projects.html" class="active">
             Projekte
         </a>
 
@@ -65,99 +67,718 @@
 </header>
 
 
+
+<!-- =========================================
+     SCROLLBEREICH
+========================================= -->
+
 <div class="scroll-area">
 
-    <main class="project-page">
+
+<main class="project-detail">
 
 
-        <!-- =========================
-             PROJEKT HEADER
-        ========================== -->
+    <!-- =====================================
+         ZURÜCK
+    ====================================== -->
 
-        <section class="project-header">
-
-            <h1 class="project-title">
-                SensorTest
-            </h1>
-
-            <p class="project-subtitle">
-                Anwendung zur Erfassung und Auswertung von Sensordaten
-            </p>
-
-        </section>
+    <a href="projects.html" class="back-link">
+        ← Zurück zur Projektübersicht
+    </a>
 
 
 
-        <!-- =========================
-             HAUPT-CARD
-        ========================== -->
+    <!-- =====================================
+         PROJEKT HEADER
+    ====================================== -->
 
-        <article class="project-card glass">
+    <section class="project-header glass">
 
+        <div class="project-header-content">
 
-            <!-- BILD -->
+            <div>
 
-            <div class="project-image">
-
-                <img
-                    src="images/projects/sensortest.jpg"
-                    alt="SensorTest Anwendung">
-
-            </div>
-
-
-
-            <!-- BESCHREIBUNG -->
-
-            <div class="project-section">
-
-                <h2>
-                    Projektbeschreibung
-                </h2>
-
-                <p>
-                    SensorTest ist eine Anwendung zur Erfassung,
-                    Darstellung und Auswertung von Sensordaten.
-                    Das Projekt entstand als praktische Anwendung
-                    zur Verbindung von Softwareentwicklung und
-                    technischer Systemanbindung.
+                <p class="project-category">
+                    PYTHON · GUI · TESTAUTOMATISIERUNG
                 </p>
 
-                <p>
-                    Ziel war es, Sensordaten strukturiert zu erfassen
-                    und dem Benutzer übersichtlich zur Verfügung zu
-                    stellen.
+                <h1>
+                    Sensor-Testsystem
+                </h1>
+
+                <p class="project-subtitle">
+                    Entwicklung einer Python-Anwendung zur
+                    automatisierten Sensorerkennung,
+                    Metadatenauswertung sowie Durchführung
+                    von Distanz- und Amplitudentests.
                 </p>
 
             </div>
 
 
+            <div class="project-tech">
 
-            <!-- FUNKTIONEN -->
+                <span>Python</span>
+                <span>PyQt5</span>
+                <span>Pytest</span>
+                <span>Sensor API</span>
+                <span>Serial Communication</span>
+                <span>Testautomatisierung</span>
+                <span>Subprocess</span>
+                <span>GUI Development</span>
 
-            <div class="project-section">
+            </div>
 
-                <h2>
-                    Funktionen
-                </h2>
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         PROJEKT BESCHREIBUNG
+    ====================================== -->
+
+    <section class="project-card glass">
+
+        <h2>
+            Projektbeschreibung
+        </h2>
+
+        <p>
+            Im Rahmen meiner IHK-Facharbeit habe ich ein
+            Python-basiertes Testsystem zur Erkennung und
+            Überprüfung von Sensoren entwickelt.
+        </p>
+
+        <p>
+            Ziel der Anwendung war es, mehrere Sensoren
+            automatisch zu erkennen, deren technische
+            Metadaten auszulesen und anschließend definierte
+            Funktionstests durchführen zu können.
+        </p>
+
+        <p>
+            Die Anwendung verfügt über eine grafische
+            Benutzeroberfläche, über die angeschlossene
+            Sensoren verwaltet und einzelne oder mehrere
+            Tests gestartet werden können.
+        </p>
+
+        <p>
+            Neben der manuellen Anzeige von Messwerten können
+            automatisierte Tests für <strong>Distanz</strong>
+            und <strong>Amplitude</strong> ausgeführt werden.
+            Die Ergebnisse werden anschließend als
+            Testreports gespeichert und innerhalb der
+            Anwendung angezeigt.
+        </p>
+
+        <p>
+            Für die Weiterentwicklung und Demonstration des
+            Projekts wurde zusätzlich eine
+            <strong>Sensorsimulation</strong> integriert.
+            Dadurch kann die Anwendung auch ohne angeschlossene
+            Hardware ausgeführt und getestet werden.
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================
+         FUNKTIONEN
+    ====================================== -->
+
+    <section class="project-card glass">
+
+        <h2>
+            Funktionen
+        </h2>
+
+
+        <div class="project-feature-grid">
+
+
+            <div class="project-feature">
+
+                <h3>
+                    Sensorerkennung
+                </h3>
+
+                <p>
+                    Die Anwendung durchsucht verfügbare
+                    Schnittstellen und erkennt angeschlossene
+                    Sensoren automatisch.
+                </p>
+
+            </div>
+
+
+            <div class="project-feature">
+
+                <h3>
+                    Sensormetadaten
+                </h3>
+
+                <p>
+                    Nach der Erkennung werden unter anderem
+                    Sensortyp, Seriennummer und verwendeter
+                    COM-Port ausgelesen und in der GUI dargestellt.
+                </p>
+
+            </div>
+
+
+            <div class="project-feature">
+
+                <h3>
+                    Live-Messwerte
+                </h3>
+
+                <p>
+                    Der aktuelle Distanzmesswert eines Sensors
+                    kann direkt über die grafische Oberfläche
+                    abgefragt und angezeigt werden.
+                </p>
+
+            </div>
+
+
+            <div class="project-feature">
+
+                <h3>
+                    Distanztest
+                </h3>
+
+                <p>
+                    Für jeden erkannten Sensor kann ein
+                    automatisierter Distanztest durchgeführt
+                    werden. Die Messwerte werden gegen definierte
+                    Grenzwerte geprüft.
+                </p>
+
+            </div>
+
+
+            <div class="project-feature">
+
+                <h3>
+                    Amplitudentest
+                </h3>
+
+                <p>
+                    Zusätzlich kann die Signalstärke bzw.
+                    Amplitude der Sensoren automatisiert
+                    überprüft werden.
+                </p>
+
+            </div>
+
+
+            <div class="project-feature">
+
+                <h3>
+                    Gesamtprüfung
+                </h3>
+
+                <p>
+                    Über die Funktion „TEST ALL“ können
+                    Distanz- und Amplitudentests nacheinander
+                    für die erkannten Sensoren ausgeführt werden.
+                </p>
+
+            </div>
+
+
+            <div class="project-feature">
+
+                <h3>
+                    Testreports
+                </h3>
+
+                <p>
+                    Die Testergebnisse werden über Pytest erzeugt,
+                    als Reports gespeichert und anschließend in
+                    der Anwendung dargestellt.
+                </p>
+
+            </div>
+
+
+            <div class="project-feature">
+
+                <h3>
+                    PASS / FAIL Status
+                </h3>
+
+                <p>
+                    Die Oberfläche visualisiert das Ergebnis
+                    jedes Tests unmittelbar als PASS oder FAIL.
+                </p>
+
+            </div>
+
+
+            <div class="project-feature">
+
+                <h3>
+                    Sensorsimulation
+                </h3>
+
+                <p>
+                    Eine integrierte Simulation stellt Sensoren,
+                    Messwerte und Metadaten bereit, sodass das
+                    Projekt auch ohne physische Hardware
+                    ausgeführt werden kann.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         BILDERGALERIE
+    ====================================== -->
+
+    <section class="project-card glass project-gallery">
+
+        <h2>
+            Projekt-Einblicke
+        </h2>
+
+        <p class="project-section-intro">
+            Screenshots zeigen die grafische Benutzeroberfläche,
+            die Sensorerkennung sowie die Durchführung und
+            Auswertung der automatisierten Tests.
+        </p>
+
+
+        <div class="gallery-grid">
+
+
+            <!-- Bild 1 -->
+
+            <button class="gallery-item"
+                    data-image="images/projects/sensortest/frontend.png"
+                    data-title="Grafische Benutzeroberfläche">
+
+                <img src="images/projects/sensortest/frontend.png"
+                     alt="Grafische Benutzeroberfläche des Sensor-Testsystems">
+
+            </button>
+
+
+            <!-- Bild 2 -->
+
+            <button class="gallery-item"
+                    data-image="images/projects/sensortest/sensors.png"
+                    data-title="Erkannte Sensoren und Metadaten">
+
+                <img src="images/projects/sensortest/sensors.png"
+                     alt="Erkannte Sensoren und Sensormetadaten">
+
+            </button>
+
+
+            <!-- Bild 3 -->
+
+            <button class="gallery-item"
+                    data-image="images/projects/sensortest/distance-test.png"
+                    data-title="Distanztest">
+
+                <img src="images/projects/sensortest/distance-test.png"
+                     alt="Durchführung des Distanztests">
+
+            </button>
+
+
+            <!-- Bild 4 -->
+
+            <button class="gallery-item"
+                    data-image="images/projects/sensortest/amplitude-test.png"
+                    data-title="Amplitudentest">
+
+                <img src="images/projects/sensortest/amplitude-test.png"
+                     alt="Durchführung des Amplitudentests">
+
+            </button>
+
+
+            <!-- Bild 5 -->
+
+            <button class="gallery-item"
+                    data-image="images/projects/sensortest/test-report.png"
+                    data-title="Testreport">
+
+                <img src="images/projects/sensortest/test-report.png"
+                     alt="Testreport mit Testergebnissen">
+
+            </button>
+
+
+            <!-- Bild 6 -->
+
+            <button class="gallery-item"
+                    data-image="images/projects/sensortest/simulation.png"
+                    data-title="Sensorsimulation">
+
+                <img src="images/projects/sensortest/simulation.png"
+                     alt="Sensorsimulation ohne physische Hardware">
+
+            </button>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         TECHNISCHE ARCHITEKTUR
+    ====================================== -->
+
+    <section class="project-card glass">
+
+        <h2>
+            Technische Architektur
+        </h2>
+
+
+        <div class="architecture">
+
+
+            <div class="architecture-layer">
+
+                <h3>
+                    Benutzeroberfläche
+                </h3>
+
+                <p>
+                    Python · PyQt5
+                </p>
+
+            </div>
+
+
+            <div class="architecture-arrow">
+                ↓
+            </div>
+
+
+            <div class="architecture-layer">
+
+                <h3>
+                    Sensorverwaltung
+                </h3>
+
+                <p>
+                    SensorRegistry · Sensor Helper
+                </p>
+
+            </div>
+
+
+            <div class="architecture-arrow">
+                ↓
+            </div>
+
+
+            <div class="architecture-layer">
+
+                <h3>
+                    Sensor-Kommunikation
+                </h3>
+
+                <p>
+                    COM-Ports · Sensor API
+                </p>
+
+            </div>
+
+
+            <div class="architecture-arrow">
+                ↓
+            </div>
+
+
+            <div class="architecture-layer">
+
+                <h3>
+                    Testautomatisierung
+                </h3>
+
+                <p>
+                    Pytest · Distanz · Amplitude
+                </p>
+
+            </div>
+
+
+            <div class="architecture-arrow">
+                ↓
+            </div>
+
+
+            <div class="architecture-layer">
+
+                <h3>
+                    Testreports
+                </h3>
+
+                <p>
+                    Python · Subprocess · Report-Dateien
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <p class="architecture-description">
+
+            Die Anwendung ist in mehrere funktionale Bereiche
+            aufgeteilt. Die PyQt5-Oberfläche übernimmt die
+            Benutzerinteraktion und stellt erkannte Sensoren
+            sowie Testergebnisse dar.
+
+            Die Sensorverwaltung kapselt die Erkennung und
+            Verwaltung der Sensorinstanzen. Über die Sensor-
+            Schnittstelle werden Metadaten und Messwerte
+            ausgelesen.
+
+            Die eigentlichen Prüfungen werden über Pytest
+            automatisiert ausgeführt. Die Testprozesse werden
+            aus der Anwendung heraus gestartet und ihre
+            Ergebnisse anschließend als Reports verarbeitet.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================
+         SENSORERKENNUNG
+    ====================================== -->
+
+    <section class="project-card glass">
+
+        <h2>
+            Sensorerkennung und Metadaten
+        </h2>
+
+        <p>
+            Beim Start der Sensorerkennung werden die verfügbaren
+            COM-Schnittstellen ermittelt und anschließend auf
+            vorhandene Sensoren überprüft.
+        </p>
+
+        <p>
+            Erkannte Sensoren werden in einer zentralen
+            <strong>SensorRegistry</strong> verwaltet. Dadurch
+            können die Sensorinstanzen innerhalb der Anwendung
+            gezielt angesprochen und für Messungen und Tests
+            verwendet werden.
+        </p>
+
+
+        <div class="endpoint-list">
+
+
+            <div class="endpoint">
+
+                <code>
+                    COM-Port
+                </code>
+
+                <span>
+                    Schnittstelle, über die der Sensor erkannt wurde
+                </span>
+
+            </div>
+
+
+            <div class="endpoint">
+
+                <code>
+                    Sensor Type
+                </code>
+
+                <span>
+                    Ermittelter Sensortyp
+                </span>
+
+            </div>
+
+
+            <div class="endpoint">
+
+                <code>
+                    Serial Number
+                </code>
+
+                <span>
+                    Eindeutige Seriennummer des Sensors
+                </span>
+
+            </div>
+
+
+            <div class="endpoint">
+
+                <code>
+                    Distance
+                </code>
+
+                <span>
+                    Aktuell gemessener Distanzwert
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         TESTAUTOMATISIERUNG
+    ====================================== -->
+
+    <section class="project-card glass">
+
+        <h2>
+            Automatisierte Tests
+        </h2>
+
+        <p>
+            Ein zentraler Bestandteil des Projekts ist die
+            automatisierte Überprüfung der Sensoren.
+            Die Tests werden mit <strong>Pytest</strong>
+            umgesetzt und aus der grafischen Anwendung heraus
+            gestartet.
+        </p>
+
+        <p>
+            Für den Distanztest wird der aktuelle Messwert
+            eines Sensors ausgelesen und gegen einen definierten
+            Wertebereich geprüft.
+        </p>
+
+        <p>
+            Zusätzlich wird die Amplitude des Sensors überprüft.
+            Die Tests können entweder einzeln für einen Sensor
+            oder für alle erkannten Sensoren ausgeführt werden.
+        </p>
+
+
+        <div class="deployment-flow">
+
+            <span>
+                Sensor
+            </span>
+
+            <span>
+                →
+            </span>
+
+            <span>
+                Messwert
+            </span>
+
+            <span>
+                →
+            </span>
+
+            <span>
+                Pytest
+            </span>
+
+            <span>
+                →
+            </span>
+
+            <span>
+                PASS / FAIL
+            </span>
+
+            <span>
+                →
+            </span>
+
+            <span>
+                Testreport
+            </span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         TESTREPORT
+    ====================================== -->
+
+    <section class="project-card glass">
+
+        <h2>
+            Testreports und Auswertung
+        </h2>
+
+        <p>
+            Die Ergebnisse der automatisierten Prüfungen werden
+            für jeden Sensor separat gespeichert.
+        </p>
+
+        <p>
+            Die Anwendung startet die Pytest-Testfälle über einen
+            separaten Prozess und schreibt dessen Ausgabe in
+            entsprechende Report-Dateien.
+        </p>
+
+        <p>
+            Über die grafische Oberfläche können die erzeugten
+            Reports anschließend angezeigt werden. Zusätzlich
+            wird das Testergebnis direkt am jeweiligen Sensor
+            visualisiert.
+        </p>
+
+
+        <div class="migration-grid">
+
+
+            <div class="migration-column">
+
+                <h3>
+                    Erfolgreicher Test
+                </h3>
 
                 <ul>
 
                     <li>
-                        Erfassung von Sensordaten
+                        Pytest beendet sich erfolgreich
                     </li>
 
                     <li>
-                        Darstellung der Messwerte
+                        Teststatus: PASS
                     </li>
 
                     <li>
-                        Verarbeitung und Auswertung
-                        der erfassten Daten
+                        Ergebnis wird in der GUI angezeigt
                     </li>
 
                     <li>
-                        Strukturierte Benutzeroberfläche
+                        Report bleibt zur Analyse erhalten
                     </li>
 
                 </ul>
@@ -165,95 +786,369 @@
             </div>
 
 
-
-            <!-- TECHNIK -->
-
-            <div class="project-section">
-
-                <h2>
-                    Technische Umsetzung
-                </h2>
-
-                <p>
-                    Das Projekt wurde mit
-                    <strong>C#</strong> und
-                    <strong>.NET</strong> umgesetzt.
-                    Die Anwendung verwendet eine strukturierte
-                    Trennung zwischen Benutzeroberfläche,
-                    Programmlogik und Datenverarbeitung.
-                </p>
-
-                <div class="technology-list">
-
-                    <span>C#</span>
-                    <span>.NET</span>
-                    <span>Visual Studio</span>
-
-                </div>
-
+            <div class="migration-arrow">
+                →
             </div>
 
 
+            <div class="migration-column">
 
-            <!-- LERNZIEL -->
+                <h3>
+                    Fehlgeschlagener Test
+                </h3>
 
-            <div class="project-section">
+                <ul>
 
-                <h2>
-                    Was ich dabei gelernt habe
-                </h2>
+                    <li>
+                        Grenzwert wird nicht eingehalten
+                    </li>
 
-                <p>
-                    Bei der Entwicklung standen insbesondere die
-                    praktische Anwendung von C#, die Strukturierung
-                    einer Anwendung sowie die Verarbeitung von
-                    technischen Messdaten im Vordergrund.
-                </p>
+                    <li>
+                        Teststatus: FAIL
+                    </li>
 
-            </div>
+                    <li>
+                        Fehler wird im Report dokumentiert
+                    </li>
 
+                    <li>
+                        Ergebnis kann anschließend analysiert werden
+                    </li>
 
-
-            <!-- GITHUB -->
-
-            <div class="project-actions">
-
-                <a
-                    href="DEIN-GITHUB-LINK"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="newsletter-button">
-
-                    GitHub
-
-                </a>
+                </ul>
 
             </div>
 
+        </div>
 
-        </article>
+    </section>
 
 
 
-        <!-- ZURÜCK -->
+    <!-- =====================================
+         SENSORSIMULATION
+    ====================================== -->
 
-        <a href="projects.html"
-           class="back-link">
+    <section class="project-card glass">
 
-            ← Zurück zur Projektübersicht
+        <h2>
+            Sensorsimulation
+        </h2>
+
+        <p>
+            Um das Projekt unabhängig von der ursprünglichen
+            Sensorhardware ausführbar zu machen, wurde eine
+            eigene Sensorsimulation integriert.
+        </p>
+
+        <p>
+            Die simulierten Sensoren stellen dieselben
+            grundlegenden Schnittstellen bereit, die auch von
+            der eigentlichen Anwendung verwendet werden.
+            Dadurch kann die bestehende GUI- und Testlogik
+            weiterverwendet werden.
+        </p>
+
+        <p>
+            Die Simulation erzeugt realistische Schwankungen
+            bei Distanz- und Amplitudenmesswerten. Zusätzlich
+            sind unterschiedliche Sensoren mit eigenen
+            Seriennummern, Sensortypen und Messwerten definiert.
+        </p>
+
+        <p>
+            Ein Sensor ist bewusst so konfiguriert, dass er die
+            definierten Grenzwerte nicht erfüllt. Dadurch lässt
+            sich auch das Verhalten eines fehlgeschlagenen Tests
+            demonstrieren.
+        </p>
+
+
+        <div class="deployment-flow">
+
+            <span>
+                Simulierter Sensor
+            </span>
+
+            <span>
+                →
+            </span>
+
+            <span>
+                SensorRegistry
+            </span>
+
+            <span>
+                →
+            </span>
+
+            <span>
+                GUI
+            </span>
+
+            <span>
+                →
+            </span>
+
+            <span>
+                Pytest
+            </span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         GUI
+    ====================================== -->
+
+    <section class="project-card glass">
+
+        <h2>
+            Grafische Benutzeroberfläche
+        </h2>
+
+        <p>
+            Die Benutzeroberfläche wurde mit
+            <strong>PyQt5</strong> entwickelt und stellt die
+            wichtigsten Funktionen des Testsystems zentral zur
+            Verfügung.
+        </p>
+
+        <p>
+            Für bis zu sechs Sensoren werden jeweils Sensortyp,
+            Seriennummer, COM-Port und aktueller Distanzwert
+            angezeigt.
+        </p>
+
+        <p>
+            Über separate Schaltflächen können einzelne Sensoren
+            getestet oder komplette Testläufe für alle erkannten
+            Sensoren gestartet werden.
+        </p>
+
+        <p>
+            Ein integriertes Log- und Reportfenster ermöglicht
+            zusätzlich die Anzeige der detaillierten
+            Testergebnisse.
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================
+         IHK FACHARBEIT
+    ====================================== -->
+
+    <section class="project-card glass">
+
+        <h2>
+            IHK-Facharbeit
+        </h2>
+
+        <p>
+            Das Projekt entstand im Rahmen meiner
+            <strong>IHK-Facharbeit zum Fachinformatiker für
+            Anwendungsentwicklung</strong>.
+        </p>
+
+        <p>
+            Dabei wurden Anforderungen analysiert, eine
+            technische Lösung entwickelt und anschließend
+            implementiert und getestet.
+        </p>
+
+        <p>
+            Neben der eigentlichen Programmierung waren auch
+            Themen wie Softwarearchitektur, Schnittstellen,
+            Testautomatisierung, Fehlerbehandlung und
+            Dokumentation Bestandteil des Projekts.
+        </p>
+
+        <p>
+            Die Entwicklung bot dabei die Möglichkeit, ein
+            reales technisches Problem mit einer eigenständigen
+            Softwarelösung abzubilden und die Anwendung
+            anschließend systematisch zu testen.
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================
+         LERNZIELE
+    ====================================== -->
+
+    <section class="project-card glass">
+
+        <h2>
+            Was ich dabei gelernt habe
+        </h2>
+
+        <ul class="project-learning-list">
+
+            <li>
+                Entwicklung grafischer Benutzeroberflächen
+                mit Python und PyQt5
+            </li>
+
+            <li>
+                Strukturierung einer größeren Python-Anwendung
+                in mehrere Module
+            </li>
+
+            <li>
+                Umgang mit Hardware-Schnittstellen und
+                COM-Ports
+            </li>
+
+            <li>
+                Verarbeitung von Sensordaten und Metadaten
+            </li>
+
+            <li>
+                Verwaltung von Sensorinstanzen über eine
+                zentrale Registry
+            </li>
+
+            <li>
+                Entwicklung automatisierter Tests mit Pytest
+            </li>
+
+            <li>
+                Verarbeitung von Testresultaten und
+                Erstellung von Reports
+            </li>
+
+            <li>
+                Kommunikation zwischen GUI und separaten
+                Testprozessen
+            </li>
+
+            <li>
+                Entwicklung einer Hardwaresimulation zur
+                unabhängigen Ausführung der Anwendung
+            </li>
+
+            <li>
+                Planung, Implementierung und Dokumentation
+                eines vollständigen IHK-Projekts
+            </li>
+
+        </ul>
+
+    </section>
+
+
+
+    <!-- =====================================
+         GITHUB
+    ====================================== -->
+
+    <section class="project-card glass project-github">
+
+        <h2>
+            Quellcode
+        </h2>
+
+        <p>
+            Der Quellcode des Projekts befindet sich auf GitHub.
+            Die aktuelle Version enthält zusätzlich eine
+            Sensorsimulation, sodass die Anwendung auch ohne
+            angeschlossene Hardware ausgeführt werden kann.
+        </p>
+
+
+        <a href="https://github.com/MSchottDev/SensorTest"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="newsletter-button">
+
+            GitHub Repository
 
         </a>
 
+    </section>
 
-    </main>
+
+
+    <!-- =====================================
+         ZURÜCK
+    ====================================== -->
+
+    <a href="projects.html" class="back-link">
+
+        ← Zurück zur Projektübersicht
+
+    </a>
+
+
+</main>
+
 
 </div>
 
 
 
+<!-- =========================================
+     LIGHTBOX
+========================================= -->
+
+<div class="gallery-lightbox"
+     id="galleryLightbox">
+
+
+    <button class="lightbox-close"
+            aria-label="Galerie schließen">
+
+        ×
+
+    </button>
+
+
+    <button class="lightbox-prev"
+            aria-label="Vorheriges Bild">
+
+        ‹
+
+    </button>
+
+
+    <div class="lightbox-content">
+
+        <img id="lightboxImage"
+             src=""
+             alt="">
+
+        <p id="lightboxTitle"></p>
+
+    </div>
+
+
+    <button class="lightbox-next"
+            aria-label="Nächstes Bild">
+
+        ›
+
+    </button>
+
+
+</div>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
 <footer class="bottom-bar">
 
     <div></div>
+
 
     <div class="footer-links">
 
@@ -269,8 +1164,11 @@
 
     </div>
 
+
     <div class="footer-right">
+
         © 2026 Matthias Schott
+
     </div>
 
 </footer>
