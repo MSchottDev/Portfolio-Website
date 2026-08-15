@@ -1,22 +1,30 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Portfolio von Matthias Schott">
+    <meta name="description"
+          content="SensorTest – Projekt von Matthias Schott">
 
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/preview.js" defer></script>
+    <link rel="stylesheet" href="css/project-detail.css">
 
-    <link rel="preload" href="images/bg.jpg" as="image" fetchpriority="high">
+    <link rel="preload"
+          href="images/bg.jpg"
+          as="image"
+          fetchpriority="high">
+
     <link rel="icon" href="images/favicon.ico">
 
-    <title>Portfolio – Matthias Schott</title>
+    <title>SensorTest – Matthias Schott</title>
 </head>
 
-<body class="landing">
+
+<body>
+
 
 <header class="top-bar">
 
@@ -26,42 +34,248 @@
     </div>
 
     <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">Über mich</a>
-        <a href="projects.html" class="active">Projekte</a>
-        <a href="vlab.html">vLab</a>
-        <a href="skills.html">Skills</a>
-        <a href="contact.html">Kontakt</a>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="about.html">
+            Über mich
+        </a>
+
+        <a href="projects.html"
+           class="active">
+            Projekte
+        </a>
+
+        <a href="vlab.html">
+            vLab
+        </a>
+
+        <a href="skills.html">
+            Skills
+        </a>
+
+        <a href="contact.html">
+            Kontakt
+        </a>
+
     </nav>
 
 </header>
 
-<main class="hero-section">
+
+<div class="scroll-area">
+
+    <main class="project-page">
 
 
-    
+        <!-- =========================
+             PROJEKT HEADER
+        ========================== -->
 
-<a href="projects.html" class="back-link">
-        ← Zurück zur Projektübersicht
-    </a>
+        <section class="project-header">
+
+            <h1 class="project-title">
+                SensorTest
+            </h1>
+
+            <p class="project-subtitle">
+                Anwendung zur Erfassung und Auswertung von Sensordaten
+            </p>
+
+        </section>
 
 
 
-</main>
+        <!-- =========================
+             HAUPT-CARD
+        ========================== -->
+
+        <article class="project-card glass">
+
+
+            <!-- BILD -->
+
+            <div class="project-image">
+
+                <img
+                    src="images/projects/sensortest.jpg"
+                    alt="SensorTest Anwendung">
+
+            </div>
+
+
+
+            <!-- BESCHREIBUNG -->
+
+            <div class="project-section">
+
+                <h2>
+                    Projektbeschreibung
+                </h2>
+
+                <p>
+                    SensorTest ist eine Anwendung zur Erfassung,
+                    Darstellung und Auswertung von Sensordaten.
+                    Das Projekt entstand als praktische Anwendung
+                    zur Verbindung von Softwareentwicklung und
+                    technischer Systemanbindung.
+                </p>
+
+                <p>
+                    Ziel war es, Sensordaten strukturiert zu erfassen
+                    und dem Benutzer übersichtlich zur Verfügung zu
+                    stellen.
+                </p>
+
+            </div>
+
+
+
+            <!-- FUNKTIONEN -->
+
+            <div class="project-section">
+
+                <h2>
+                    Funktionen
+                </h2>
+
+                <ul>
+
+                    <li>
+                        Erfassung von Sensordaten
+                    </li>
+
+                    <li>
+                        Darstellung der Messwerte
+                    </li>
+
+                    <li>
+                        Verarbeitung und Auswertung
+                        der erfassten Daten
+                    </li>
+
+                    <li>
+                        Strukturierte Benutzeroberfläche
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- TECHNIK -->
+
+            <div class="project-section">
+
+                <h2>
+                    Technische Umsetzung
+                </h2>
+
+                <p>
+                    Das Projekt wurde mit
+                    <strong>C#</strong> und
+                    <strong>.NET</strong> umgesetzt.
+                    Die Anwendung verwendet eine strukturierte
+                    Trennung zwischen Benutzeroberfläche,
+                    Programmlogik und Datenverarbeitung.
+                </p>
+
+                <div class="technology-list">
+
+                    <span>C#</span>
+                    <span>.NET</span>
+                    <span>Visual Studio</span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- LERNZIEL -->
+
+            <div class="project-section">
+
+                <h2>
+                    Was ich dabei gelernt habe
+                </h2>
+
+                <p>
+                    Bei der Entwicklung standen insbesondere die
+                    praktische Anwendung von C#, die Strukturierung
+                    einer Anwendung sowie die Verarbeitung von
+                    technischen Messdaten im Vordergrund.
+                </p>
+
+            </div>
+
+
+
+            <!-- GITHUB -->
+
+            <div class="project-actions">
+
+                <a
+                    href="DEIN-GITHUB-LINK"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="newsletter-button">
+
+                    GitHub
+
+                </a>
+
+            </div>
+
+
+        </article>
+
+
+
+        <!-- ZURÜCK -->
+
+        <a href="projects.html"
+           class="back-link">
+
+            ← Zurück zur Projektübersicht
+
+        </a>
+
+
+    </main>
+
+</div>
+
+
 
 <footer class="bottom-bar">
 
     <div></div>
 
     <div class="footer-links">
-        <a href="impressum.html">Impressum</a>
+
+        <a href="impressum.html">
+            Impressum
+        </a>
+
         <span class="divider"></span>
-        <a href="datenschutz.html">Datenschutz</a>
+
+        <a href="datenschutz.html">
+            Datenschutz
+        </a>
+
     </div>
 
-    <div class="footer-right">© 2026 Matthias Schott</div>
+    <div class="footer-right">
+        © 2026 Matthias Schott
+    </div>
 
 </footer>
 
+
 </body>
+
 </html>

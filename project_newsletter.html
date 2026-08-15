@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Portfolio von Matthias Schott">
+    <meta name="description"
+          content="Newsletter-System mit ASP.NET Core, Azure Functions, Entity Framework Core, SendGrid und GitHub Actions – Projekt von Matthias Schott">
 
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/preview.js" defer></script>
+    
+    <link rel="stylesheet" href="css/project-detail.css">
 
-    <link rel="preload" href="images/bg.jpg" as="image" fetchpriority="high">
+    <script src="js/gallery.js" defer></script>
+
+    <link rel="preload"
+          href="images/bg.jpg"
+          as="image"
+          fetchpriority="high">
+
     <link rel="icon" href="images/favicon.ico">
 
-    <title>Portfolio – Matthias Schott</title>
+    <title>Newsletter-System – Matthias Schott</title>
 </head>
 
+
 <body class="landing">
+
 
 <header class="top-bar">
 
@@ -26,42 +37,886 @@
     </div>
 
     <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">Über mich</a>
-        <a href="projects.html" class="active">Projekte</a>
-        <a href="vlab.html">vLab</a>
-        <a href="skills.html">Skills</a>
-        <a href="contact.html">Kontakt</a>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="about.html">
+            Über mich
+        </a>
+
+        <a href="projects.html" class="active">
+            Projekte
+        </a>
+
+        <a href="vlab.html">
+            vLab
+        </a>
+
+        <a href="skills.html">
+            Skills
+        </a>
+
+        <a href="contact.html">
+            Kontakt
+        </a>
+
     </nav>
 
 </header>
 
-<main class="hero-section">
+
+<!-- =========================================
+     SCROLLBEREICH
+========================================= -->
+
+<div class="scroll-area">
 
 
-    
-<a href="projects.html" class="back-link">
+<main class="project-detail">
+
+
+    <!-- =====================================
+         ZURÜCK
+    ====================================== -->
+
+    <a href="projects.html" class="back-link">
         ← Zurück zur Projektübersicht
     </a>
 
 
+    <!-- =====================================
+         PROJEKT HEADER
+    ====================================== -->
+
+    <section class="project-header glass">
+
+        <div class="project-header-content">
+
+            <div>
+
+                <p class="project-category">
+                    WEB DEVELOPMENT · CLOUD · API
+                </p>
+
+                <h1>
+                    Newsletter-System
+                </h1>
+
+                <p class="project-subtitle">
+                    Entwicklung einer eigenen Newsletter-API
+                    mit ASP.NET Core, Azure Functions,
+                    Entity Framework Core und SendGrid.
+                </p>
+
+            </div>
+
+
+            <div class="project-tech">
+
+                <span>ASP.NET Core</span>
+                <span>.NET 8</span>
+                <span>C#</span>
+                <span>Entity Framework Core</span>
+                <span>Azure Functions</span>
+                <span>Azure SQL</span>
+                <span>SendGrid</span>
+                <span>GitHub Actions</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         PROJEKT BESCHREIBUNG
+    ====================================== -->
+
+    <section class="project-card glass">
+
+        <h2>
+            Projektbeschreibung
+        </h2>
+
+        <p>
+            Im Rahmen meines Portfolios habe ich ein eigenes
+            Newsletter-System entwickelt. Ziel war es, eine
+            vollständige Anwendung zu erstellen, bei der
+            Frontend, Backend, Datenbank, E-Mail-Versand und
+            Cloud-Infrastruktur miteinander verbunden sind.
+        </p>
+
+        <p>
+            Besucher können sich über ein Webformular für den
+            Newsletter registrieren. Die E-Mail-Adresse wird
+            zunächst in der Datenbank gespeichert und anschließend
+            über SendGrid eine individuelle Bestätigungsmail
+            versendet.
+        </p>
+
+        <p>
+            Die Anmeldung verwendet einen
+            <strong>Double-Opt-in-Prozess</strong>.
+            Erst nachdem der Benutzer den persönlichen
+            Bestätigungslink aus der E-Mail aufgerufen hat,
+            wird die Anmeldung als bestätigt gespeichert.
+        </p>
+
+        <p>
+            Das Projekt wurde zunächst als klassische
+            ASP.NET-Core-Web-API auf einem Azure App Service
+            betrieben. Im weiteren Verlauf wurde die Anwendung
+            auf eine serverlose Architektur mit
+            <strong>Azure Functions</strong> migriert.
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================
+         FUNKTIONEN
+    ====================================== -->
+
+    <section class="project-card glass">
+
+        <h2>
+            Funktionen
+        </h2>
+
+        <div class="project-feature-grid">
+
+
+            <div class="project-feature">
+
+                <h3>
+                    Registrierung
+                </h3>
+
+                <p>
+                    Benutzer können ihre E-Mail-Adresse über
+                    das Newsletter-Frontend registrieren.
+                    Bereits registrierte oder bestätigte
+                    Adressen werden erkannt.
+                </p>
+
+            </div>
+
+
+            <div class="project-feature">
+
+                <h3>
+                    Double Opt-in
+                </h3>
+
+                <p>
+                    Nach der Registrierung wird eine
+                    persönliche Bestätigungsmail mit einem
+                    eindeutigen Token versendet.
+                </p>
+
+            </div>
+
+
+            <div class="project-feature">
+
+                <h3>
+                    Bestätigung
+                </h3>
+
+                <p>
+                    Der Bestätigungslink ruft eine HTTP-Function
+                    auf. Der Token wird geprüft und der
+                    Teilnehmer anschließend als bestätigt
+                    gespeichert.
+                </p>
+
+            </div>
+
+
+            <div class="project-feature">
+
+                <h3>
+                    Abmeldung
+                </h3>
+
+                <p>
+                    Jeder Teilnehmer erhält einen individuellen
+                    Abmeldelink. Über diesen kann die
+                    Newsletter-Anmeldung wieder entfernt werden.
+                </p>
+
+            </div>
+
+
+            <div class="project-feature">
+
+                <h3>
+                    Bestätigung erneut senden
+                </h3>
+
+                <p>
+                    Für noch nicht bestätigte Adressen kann eine
+                    neue Bestätigungsmail mit einem neuen Token
+                    angefordert werden.
+                </p>
+
+            </div>
+
+
+            <div class="project-feature">
+
+                <h3>
+                    E-Mail-Versand
+                </h3>
+
+                <p>
+                    Der Versand der Bestätigungs- und
+                    Willkommensmails erfolgt über die
+                    SendGrid API.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         BILDERGALERIE
+    ====================================== -->
+
+    <section class="project-card glass project-gallery">
+
+        <h2>
+            Projekt-Einblicke
+        </h2>
+
+        <p class="project-section-intro">
+            Ausgewählte Screenshots zeigen den Ablauf der
+            Anwendung sowie die eingesetzten Cloud- und
+            Deployment-Komponenten.
+        </p>
+
+
+        <div class="gallery-grid">
+
+
+            <!-- Bild 1 -->
+
+            <button class="gallery-item"
+                    data-image="images/projects/newsletter/frontend.png"
+                    data-title="Newsletter-Frontend">
+
+                <img src="images/projects/newsletter/frontend.png"
+                     alt="Newsletter-Frontend">
+
+            </button>
+
+
+            <!-- Bild 2 -->
+
+            <button class="gallery-item"
+                    data-image="images/projects/newsletter/bestätigungsmail.png"
+                    data-title="Bestätigungsmail">
+
+                <img src="images/projects/newsletter/bestätigungsmail.png"
+                     alt="Bestätigungsmail">
+
+            </button>
+
+
+            <!-- Bild 3 -->
+
+            <button class="gallery-item"
+                    data-image="images/projects/newsletter/Willkommensmails.png"
+                    data-title="Erfolgreiche Bestätigung">
+
+                <img src="images/projects/newsletter/bestätigungsmail.png"
+                     alt="Erfolgreiche Bestätigung">
+
+            </button>
+
+
+            <!-- Bild 4 -->
+
+            <button class="gallery-item"
+                    data-image="images/newsletter/azure-functions.jpg"
+                    data-title="Azure Functions">
+
+                <img src="images/newsletter/azure-functions.jpg"
+                     alt="Azure Functions">
+
+            </button>
+
+
+            <!-- Bild 5 -->
+
+            <button class="gallery-item"
+                    data-image="images/newsletter/github-actions.jpg"
+                    data-title="GitHub Actions Deployment">
+
+                <img src="images/newsletter/github-actions.jpg"
+                     alt="GitHub Actions Deployment">
+
+            </button>
+
+
+            <!-- Bild 6 -->
+
+            <button class="gallery-item"
+                    data-image="images/newsletter/azure-sql.jpg"
+                    data-title="Datenbank / Azure SQL">
+
+                <img src="images/newsletter/azure-sql.jpg"
+                     alt="Azure SQL Datenbank">
+
+            </button>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         TECHNISCHE ARCHITEKTUR
+    ====================================== -->
+
+    <section class="project-card glass">
+
+        <h2>
+            Technische Architektur
+        </h2>
+
+
+        <div class="architecture">
+
+            <div class="architecture-layer">
+
+                <h3>
+                    Frontend
+                </h3>
+
+                <p>
+                    HTML · CSS · JavaScript
+                </p>
+
+            </div>
+
+
+            <div class="architecture-arrow">
+                ↓
+            </div>
+
+
+            <div class="architecture-layer">
+
+                <h3>
+                    API
+                </h3>
+
+                <p>
+                    C# · .NET 8 · Azure Functions
+                </p>
+
+            </div>
+
+
+            <div class="architecture-arrow">
+                ↓
+            </div>
+
+
+            <div class="architecture-layer">
+
+                <h3>
+                    Datenbank
+                </h3>
+
+                <p>
+                    Entity Framework Core · Azure SQL
+                </p>
+
+            </div>
+
+
+            <div class="architecture-arrow">
+                ↓
+            </div>
+
+
+            <div class="architecture-layer">
+
+                <h3>
+                    E-Mail-Service
+                </h3>
+
+                <p>
+                    SendGrid API
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <p class="architecture-description">
+
+            Die einzelnen Komponenten sind über klar definierte
+            Schnittstellen miteinander verbunden. Das Frontend
+            kommuniziert per HTTP mit den Azure Functions.
+            Die Functions greifen über Entity Framework Core auf
+            die Datenbank zu und verwenden SendGrid für den
+            E-Mail-Versand.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================
+         API
+    ====================================== -->
+
+    <section class="project-card glass">
+
+        <h2>
+            API und Azure Functions
+        </h2>
+
+        <p>
+            Das Backend stellt verschiedene HTTP-Endpunkte zur
+            Verarbeitung der Newsletter-Anmeldungen bereit.
+            Die ursprüngliche ASP.NET-Core-API wurde im Zuge
+            der Weiterentwicklung in einzelne Azure Functions
+            überführt.
+        </p>
+
+
+        <div class="endpoint-list">
+
+
+            <div class="endpoint">
+
+                <code>
+                    POST /api/subscribers
+                </code>
+
+                <span>
+                    Registrierung eines neuen Teilnehmers
+                </span>
+
+            </div>
+
+
+            <div class="endpoint">
+
+                <code>
+                    GET /api/subscribers/confirm
+                </code>
+
+                <span>
+                    Bestätigung der E-Mail-Adresse
+                </span>
+
+            </div>
+
+
+            <div class="endpoint">
+
+                <code>
+                    GET /api/subscribers/unsubscribe
+                </code>
+
+                <span>
+                    Abmeldung vom Newsletter
+                </span>
+
+            </div>
+
+
+            <div class="endpoint">
+
+                <code>
+                    POST /api/subscribers/resend-confirmation
+                </code>
+
+                <span>
+                    Erneutes Versenden der Bestätigungsmail
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         MIGRATION
+    ====================================== -->
+
+    <section class="project-card glass">
+
+        <h2>
+            Migration von Azure App Service zu Azure Functions
+        </h2>
+
+        <p>
+            Die erste Version des Backends wurde als klassische
+            ASP.NET-Core-Web-API auf einem Azure App Service
+            betrieben.
+        </p>
+
+        <p>
+            Während der Entwicklung stellte sich heraus, dass
+            für die relativ seltenen Anfragen des Newsletter-
+            Systems ein dauerhaft laufender App Service nicht
+            notwendig ist.
+        </p>
+
+        <p>
+            Daher wurde das Backend auf eine
+            <strong>Azure Functions App im Flex Consumption
+            Modell</strong> migriert.
+        </p>
+
+
+        <div class="migration-grid">
+
+
+            <div class="migration-column">
+
+                <h3>
+                    Ursprüngliche Architektur
+                </h3>
+
+                <ul>
+
+                    <li>
+                        ASP.NET Core Web API
+                    </li>
+
+                    <li>
+                        Azure App Service
+                    </li>
+
+                    <li>
+                        dauerhaft bereitgestellte Anwendung
+                    </li>
+
+                    <li>
+                        höherer Grundpreis
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="migration-arrow">
+                →
+            </div>
+
+
+            <div class="migration-column">
+
+                <h3>
+                    Aktuelle Architektur
+                </h3>
+
+                <ul>
+
+                    <li>
+                        .NET 8 Isolated Worker
+                    </li>
+
+                    <li>
+                        Azure Functions
+                    </li>
+
+                    <li>
+                        Flex Consumption
+                    </li>
+
+                    <li>
+                        serverlose Ausführung
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <p>
+            Bei der Migration musste insbesondere die Struktur
+            der Controller an das Azure-Functions-Modell angepasst
+            werden. Anstelle klassischer ASP.NET-Core-Controller
+            werden HTTP-triggered Functions verwendet, die
+            <code>HttpRequestData</code> und
+            <code>HttpResponseData</code> verwenden.
+        </p>
+
+        <p>
+            Die Datenzugriffsschicht mit Entity Framework Core
+            sowie die Services für den E-Mail-Versand konnten
+            weitgehend weiterverwendet werden.
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================
+         CI / CD
+    ====================================== -->
+
+    <section class="project-card glass">
+
+        <h2>
+            Deployment und CI/CD
+        </h2>
+
+        <p>
+            Der Quellcode wird in GitHub verwaltet. Änderungen
+            am Main-Branch werden über GitHub Actions automatisch
+            verarbeitet und in die Azure Functions App deployed.
+        </p>
+
+        <p>
+            Für die Authentifizierung zwischen GitHub Actions
+            und Azure wird OpenID Connect (OIDC) verwendet.
+            Dadurch ist kein dauerhaft gespeichertes Azure-
+            Passwort oder Client-Secret im Repository notwendig.
+        </p>
+
+        <div class="deployment-flow">
+
+            <span>
+                GitHub
+            </span>
+
+            <span>
+                →
+            </span>
+
+            <span>
+                GitHub Actions
+            </span>
+
+            <span>
+                →
+            </span>
+
+            <span>
+                Azure
+            </span>
+
+            <span>
+                →
+            </span>
+
+            <span>
+                Azure Functions
+            </span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         LERNZIELE
+    ====================================== -->
+
+    <section class="project-card glass">
+
+        <h2>
+            Was ich dabei gelernt habe
+        </h2>
+
+        <ul class="project-learning-list">
+
+            <li>
+                Aufbau einer REST-orientierten HTTP-API mit C# und .NET
+            </li>
+
+            <li>
+                Verwendung von Entity Framework Core für den Datenzugriff
+            </li>
+
+            <li>
+                Arbeit mit Azure Functions und serverlosen Architekturen
+            </li>
+
+            <li>
+                Integration einer externen API mit SendGrid
+            </li>
+
+            <li>
+                Konfiguration von Azure-Diensten und DNS
+            </li>
+
+            <li>
+                Automatisiertes Deployment mit GitHub Actions
+            </li>
+
+            <li>
+                Authentifizierung von CI/CD-Prozessen über OpenID Connect
+            </li>
+
+            <li>
+                Migration einer klassischen Web-API in eine
+                serverlose Architektur
+            </li>
+
+        </ul>
+
+    </section>
+
+
+
+    <!-- =====================================
+         GITHUB
+    ====================================== -->
+
+    <section class="project-card glass project-github">
+
+        <h2>
+            Quellcode
+        </h2>
+
+        <p>
+            Der vollständige Quellcode sowie eine ausführliche
+            technische Dokumentation des Projekts befinden sich
+            auf GitHub.
+        </p>
+
+
+        <a href="https://github.com/MSchottDev/Newsletter-Backend-Function"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="newsletter-button">
+
+            GitHub Repository
+
+        </a>
+
+    </section>
+
+
+
+    <!-- =====================================
+         ZURÜCK
+    ====================================== -->
+
+    <a href="projects.html" class="back-link">
+
+        ← Zurück zur Projektübersicht
+
+    </a>
 
 
 </main>
+
+
+</div>
+
+
+<!-- =========================================
+     LIGHTBOX
+========================================= -->
+
+<div class="gallery-lightbox"
+     id="galleryLightbox">
+
+
+    <button class="lightbox-close"
+            aria-label="Galerie schließen">
+
+        ×
+
+    </button>
+
+
+    <button class="lightbox-prev"
+            aria-label="Vorheriges Bild">
+
+        ‹
+
+    </button>
+
+
+    <div class="lightbox-content">
+
+        <img id="lightboxImage"
+             src=""
+             alt="">
+
+        <p id="lightboxTitle"></p>
+
+    </div>
+
+
+    <button class="lightbox-next"
+            aria-label="Nächstes Bild">
+
+        ›
+
+    </button>
+
+
+</div>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
 
 <footer class="bottom-bar">
 
     <div></div>
 
+
     <div class="footer-links">
-        <a href="impressum.html">Impressum</a>
+
+        <a href="impressum.html">
+            Impressum
+        </a>
+
         <span class="divider"></span>
-        <a href="datenschutz.html">Datenschutz</a>
+
+        <a href="datenschutz.html">
+            Datenschutz
+        </a>
+
     </div>
 
-    <div class="footer-right">© 2026 Matthias Schott</div>
+
+    <div class="footer-right">
+
+        © 2026 Matthias Schott
+
+    </div>
 
 </footer>
 
+
 </body>
+
 </html>
