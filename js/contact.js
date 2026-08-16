@@ -27,11 +27,9 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        // Button während des Versands deaktivieren
         button.disabled = true;
         button.textContent = "Wird gesendet...";
 
-        // Alte Meldung ausblenden
         successMessage.style.display = "none";
 
         try {
@@ -53,13 +51,39 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             );
 
-            const data = await response.json();
+            /*
+             * Response zunächst als Text lesen.
+             * Dadurch sehen wir auch Fehlerantworten,
+             * die eventuell kein JSON enthalten.
+             */
+            const responseText = await response.text();
 
-            console.log("Kontaktformular Response:", response.status, data);
+            console.log(
+                "Kontaktformular HTTP Status:",
+                response.status
+            );
+
+            console.log(
+                "Kontaktformular Response:",
+                responseText
+            );
+
+            let data = {};
+
+            try {
+                data = JSON.parse(responseText);
+            }
+            catch {
+                console.warn(
+                    "Response ist kein gültiges JSON."
+                );
+            }
 
             if (!response.ok) {
+
                 throw new Error(
                     data.message ||
+                    responseText ||
                     "Die Nachricht konnte nicht gesendet werden."
                 );
             }
@@ -72,7 +96,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             successMessage.textContent =
                 "Vielen Dank für Ihre Nachricht. " +
-                "Ich habe Ihre Nachricht erhalten und werde Ihnen so schnell wie möglich antworten.";
+                "Ich habe Ihre Nachricht erhalten und werde Ihnen " +
+                "so schnell wie möglich antworten.";
 
             successMessage.style.display = "block";
 
