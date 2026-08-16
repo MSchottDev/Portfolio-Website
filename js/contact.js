@@ -1,43 +1,38 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const form = document.getElementById("contactForm");
+    const form = document.querySelector(".contact-form");
+    const button = document.querySelector(".contact-button");
     const successMessage = document.querySelector(".contact-success");
-    const submitButton = form.querySelector(".contact-button");
 
-    if (!form) {
+    if (!form || !button || !successMessage) {
+        console.error("Kontaktformular konnte nicht initialisiert werden.");
         return;
     }
-
 
     form.addEventListener("submit", async (event) => {
 
         event.preventDefault();
 
-
         const name = document.getElementById("name").value.trim();
         const email = document.getElementById("email").value.trim();
         const message = document.getElementById("message").value.trim();
-
-
-        // Eingaben prüfen
 
         if (!name || !email || !message) {
 
             successMessage.textContent =
                 "Bitte füllen Sie alle Felder aus.";
 
-            successMessage.classList.add("show");
-            successMessage.classList.remove("error");
+            successMessage.style.display = "block";
 
             return;
         }
 
-
         // Button während des Versands deaktivieren
+        button.disabled = true;
+        button.textContent = "Wird gesendet...";
 
-        submitButton.disabled = true;
-        submitButton.textContent = "Wird gesendet...";
-
+        // Alte Meldung ausblenden
+        successMessage.style.display = "none";
 
         try {
 
@@ -58,9 +53,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             );
 
-
             const data = await response.json();
 
+            console.log("Kontaktformular Response:", response.status, data);
 
             if (!response.ok) {
                 throw new Error(
@@ -69,17 +64,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 );
             }
 
-
-            // Erfolg
-
-            successMessage.textContent =
-                "Ihre Nachricht wurde erfolgreich gesendet.";
-
-            successMessage.classList.add("show");
-            successMessage.classList.remove("error");
-
+            // Formular erfolgreich gesendet
             form.reset();
 
+            button.disabled = false;
+            button.textContent = "Gesendet";
+
+            successMessage.textContent =
+                "Vielen Dank für Ihre Nachricht. " +
+                "Ich habe Ihre Nachricht erhalten und werde Ihnen so schnell wie möglich antworten.";
+
+            successMessage.style.display = "block";
 
         }
         catch (error) {
@@ -89,20 +84,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 error
             );
 
+            button.disabled = false;
+            button.textContent = "Senden";
 
             successMessage.textContent =
-                "Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es später erneut.";
+                "Die Nachricht konnte leider nicht gesendet werden. " +
+                "Bitte versuchen Sie es später erneut.";
 
-            successMessage.classList.add("show");
-            successMessage.classList.add("error");
-
+            successMessage.style.display = "block";
         }
-
-
-        // Button wieder aktivieren
-
-        submitButton.disabled = false;
-        submitButton.textContent = "Senden";
 
     });
 
