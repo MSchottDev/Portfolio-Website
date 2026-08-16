@@ -1,0 +1,861 @@
+/* =========================================================
+   VIRTUAL LABORATORY
+========================================================= */
+
+.vlab-detail {
+
+    width: 100%;
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding: 25px 30px 100px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 28px;
+}
+
+
+/* =========================================================
+   BACK LINK
+========================================================= */
+
+.vlab-detail > .back-link {
+
+    align-self: center;
+
+    margin-bottom: 5px;
+
+    color: rgba(255,255,255,0.65);
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.vlab-detail > .back-link:hover {
+
+    color: #ffffff;
+
+    transform: translateX(-2px);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.vlab-header {
+
+    width: 100%;
+
+    padding: 38px 45px;
+}
+
+
+.vlab-header-content {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 50px;
+}
+
+
+.vlab-header-text {
+
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+/* =========================================================
+   CATEGORY
+========================================================= */
+
+.vlab-category {
+
+    margin-bottom: 12px;
+
+    color: rgba(56,189,248,0.75);
+
+    font-size: 11px;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.vlab-header h1 {
+
+    margin: 0 0 14px;
+
+    font-size: 38px;
+
+    font-weight: 300;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   SUBTITLE
+========================================================= */
+
+.vlab-subtitle {
+
+    max-width: 720px;
+
+    margin: 0;
+
+    color: rgba(255,255,255,0.65);
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   TECHNOLOGIES
+========================================================= */
+
+.vlab-tech {
+
+    flex-shrink: 0;
+
+    max-width: 420px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: flex-end;
+
+    gap: 8px;
+}
+
+
+.vlab-tech span {
+
+    padding: 7px 11px;
+
+    border: 1px solid rgba(255,255,255,0.14);
+
+    border-radius: 7px;
+
+    background: rgba(255,255,255,0.025);
+
+    color: rgba(255,255,255,0.68);
+
+    font-size: 11px;
+
+    letter-spacing: 0.04em;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   GENERIC CARD
+========================================================= */
+
+.vlab-card {
+
+    width: 100%;
+
+    padding: 38px 45px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+    height: auto;
+
+    min-height: 0;
+}
+
+
+/* =========================================================
+   CARD HEADINGS
+========================================================= */
+
+.vlab-card > h2 {
+
+    margin: 0 0 4px;
+
+    font-size: 22px;
+
+    font-weight: 300;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+
+    color: #ffffff;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   CARD TEXT
+========================================================= */
+
+.vlab-card > p {
+
+    margin: 0;
+
+    color: rgba(255,255,255,0.72);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+.vlab-card > p + p {
+
+    margin-top: 2px;
+}
+
+
+.vlab-section-intro {
+
+    margin-bottom: 5px;
+}
+
+
+/* =========================================================
+   TECHNICAL TERMS
+========================================================= */
+
+.tech-term {
+
+    color: rgba(56,189,248,0.85);
+
+    font-family:
+        Consolas,
+        "Courier New",
+        monospace;
+
+    font-size: 0.95em;
+}
+
+
+/* =========================================================
+   ARCHITECTURE
+========================================================= */
+
+.vlab-architecture {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 8px;
+}
+
+
+/* =========================================================
+   SERVER LAYER
+========================================================= */
+
+.vlab-layer {
+
+    width: min(100%, 600px);
+
+    padding: 22px 25px;
+
+    text-align: center;
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    border-radius: 10px;
+
+    background: rgba(255,255,255,0.02);
+}
+
+
+.vlab-layer-title {
+
+    margin-bottom: 7px;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 400;
+
+    letter-spacing: 0.06em;
+
+    text-transform: uppercase;
+}
+
+
+.vlab-layer-tech {
+
+    color: rgba(56,189,248,0.85);
+
+    font-family:
+        Consolas,
+        "Courier New",
+        monospace;
+
+    font-size: 12px;
+}
+
+
+.vlab-layer p {
+
+    margin: 7px 0 0;
+
+    color: rgba(255,255,255,0.65);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.vlab-arrow {
+
+    color: rgba(56,189,248,0.65);
+
+    font-size: 20px;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   NETWORK
+========================================================= */
+
+.vlab-network {
+
+    width: min(100%, 720px);
+
+    padding: 18px 25px;
+
+    text-align: center;
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 10px;
+
+    background: rgba(255,255,255,0.015);
+}
+
+
+.vlab-network-title {
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    letter-spacing: 0.06em;
+
+    text-transform: uppercase;
+}
+
+
+.vlab-network-description {
+
+    margin-top: 6px;
+
+    color: rgba(255,255,255,0.60);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   CLIENTS
+========================================================= */
+
+.vlab-client-grid {
+
+    width: min(100%, 720px);
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+.vlab-client {
+
+    padding: 22px;
+
+    text-align: center;
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 10px;
+
+    background: rgba(255,255,255,0.015);
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.vlab-client:hover {
+
+    border-color:
+        rgba(56,189,248,0.30);
+
+    background:
+        rgba(255,255,255,0.025);
+
+    transform: translateY(-2px);
+}
+
+
+.vlab-client-title {
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    letter-spacing: 0.06em;
+
+    text-transform: uppercase;
+}
+
+
+.vlab-client-name {
+
+    margin-top: 7px;
+
+    color: rgba(255,255,255,0.60);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   FEATURE GRID
+========================================================= */
+
+.vlab-feature-grid {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+
+    margin-top: 8px;
+}
+
+
+.vlab-feature {
+
+    padding: 24px 22px;
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.015);
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.vlab-feature:hover {
+
+    border-color:
+        rgba(56,189,248,0.30);
+
+    background:
+        rgba(255,255,255,0.025);
+
+    transform: translateY(-2px);
+}
+
+
+.vlab-feature h3 {
+
+    margin: 0 0 10px;
+
+    font-size: 15px;
+
+    font-weight: 400;
+
+    letter-spacing: 0.06em;
+
+    text-transform: uppercase;
+
+    color: #ffffff;
+}
+
+
+.vlab-feature p {
+
+    margin: 0;
+
+    color: rgba(255,255,255,0.65);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   ROADMAP
+========================================================= */
+
+.vlab-roadmap {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 14px;
+
+    margin-top: 8px;
+}
+
+
+.vlab-roadmap-item {
+
+    display: grid;
+
+    grid-template-columns: 45px 1fr;
+
+    gap: 15px;
+
+    align-items: start;
+
+    padding: 20px;
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 10px;
+
+    background: rgba(255,255,255,0.015);
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.vlab-roadmap-item:hover {
+
+    border-color:
+        rgba(56,189,248,0.30);
+
+    background:
+        rgba(255,255,255,0.025);
+
+    transform: translateY(-2px);
+}
+
+
+.vlab-roadmap-number {
+
+    color: rgba(56,189,248,0.75);
+
+    font-family:
+        Consolas,
+        "Courier New",
+        monospace;
+
+    font-size: 12px;
+
+    letter-spacing: 0.04em;
+}
+
+
+.vlab-roadmap-item h3 {
+
+    margin: 0 0 7px;
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    letter-spacing: 0.05em;
+
+    text-transform: uppercase;
+
+    color: #ffffff;
+}
+
+
+.vlab-roadmap-item p {
+
+    margin: 0;
+
+    color: rgba(255,255,255,0.65);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   LEARNING
+========================================================= */
+
+.vlab-learning {
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+.vlab-learning > p {
+
+    max-width: 800px;
+
+    text-align: center;
+}
+
+
+.vlab-learning-list {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 8px;
+}
+
+
+.vlab-learning-list span {
+
+    padding: 7px 11px;
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 7px;
+
+    background: rgba(255,255,255,0.015);
+
+    color: rgba(255,255,255,0.62);
+
+    font-size: 11px;
+
+    letter-spacing: 0.04em;
+}
+
+
+/* =========================================================
+   BOTTOM BACK LINK
+========================================================= */
+
+.bottom-back-link {
+
+    margin-top: -5px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .vlab-detail {
+
+        padding:
+            20px 20px 90px;
+    }
+
+
+    .vlab-header-content {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+
+        gap: 25px;
+    }
+
+
+    .vlab-tech {
+
+        justify-content: center;
+
+        max-width: 100%;
+    }
+
+
+    .vlab-feature-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    .vlab-roadmap {
+
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   SMARTPHONE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .vlab-detail {
+
+        padding:
+            15px 10px 70px;
+
+        gap: 20px;
+    }
+
+
+    .vlab-header {
+
+        padding:
+            30px 22px;
+    }
+
+
+    .vlab-card {
+
+        padding:
+            28px 22px;
+
+        gap: 16px;
+    }
+
+
+    .vlab-header h1 {
+
+        font-size: 27px;
+
+        letter-spacing: 0.09em;
+    }
+
+
+    .vlab-subtitle {
+
+        font-size: 13px;
+    }
+
+
+    .vlab-card > h2 {
+
+        font-size: 18px;
+    }
+
+
+    .vlab-card > p {
+
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+
+    .vlab-feature-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .vlab-client-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+
+    .vlab-roadmap {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .vlab-roadmap-item {
+
+        grid-template-columns:
+            38px 1fr;
+
+        gap: 10px;
+
+        padding: 17px;
+    }
+
+
+    .vlab-learning-list {
+
+        gap: 6px;
+    }
+
+}

@@ -1,0 +1,617 @@
+/* =========================================================
+   ABOUT DETAIL PAGE
+========================================================= */
+
+.about-detail {
+
+    width: 100%;
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding: 25px 30px 100px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 28px;
+}
+
+
+
+/* =========================================================
+   ABOUT HEADER
+========================================================= */
+
+.about-header {
+
+    width: 100%;
+
+    padding: 38px 45px;
+}
+
+
+.about-header-content {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+
+
+/* =========================================================
+   CATEGORY
+========================================================= */
+
+.about-category {
+
+    margin-bottom: 12px;
+
+    color:
+        rgba(56,189,248,0.75);
+
+    font-size: 11px;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+}
+
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.about-header h1 {
+
+    margin: 0 0 14px;
+
+    color: #ffffff;
+
+    font-size: 38px;
+
+    font-weight: 300;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+}
+
+
+
+/* =========================================================
+   SUBTITLE
+========================================================= */
+
+.about-subtitle {
+
+    max-width: 760px;
+
+    margin: 0;
+
+    color:
+        rgba(255,255,255,0.65);
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+
+/* =========================================================
+   GENERIC ABOUT CARD
+========================================================= */
+
+.about-card {
+
+    width: 100%;
+
+    padding: 38px 45px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+    height: auto;
+
+    min-height: 0;
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.015);
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+
+
+/* =========================================================
+   NORMAL CARD HOVER
+   Normale Cards bewegen sich NICHT
+========================================================= */
+
+.about-card:hover {
+
+    border-color:
+        rgba(56,189,248,0.30);
+
+    background:
+        rgba(255,255,255,0.025);
+}
+
+
+
+/* =========================================================
+   CARD HEADINGS
+========================================================= */
+
+.about-card > h2 {
+
+    margin: 0 0 4px;
+
+    color: #ffffff;
+
+    font-size: 22px;
+
+    font-weight: 300;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+
+    text-align: center;
+}
+
+
+
+/* =========================================================
+   CARD TEXT
+========================================================= */
+
+.about-card > p {
+
+    margin: 0;
+
+    color:
+        rgba(255,255,255,0.72);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+.about-card > p + p {
+
+    margin-top: 2px;
+}
+
+
+
+/* =========================================================
+   TECHNICAL TERMS
+========================================================= */
+
+.tech-text {
+
+    color:
+        rgba(56,189,248,0.85);
+
+    font-weight: 400;
+}
+
+
+
+/* =========================================================
+   ABOUT GRID
+========================================================= */
+
+.about-grid {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+
+/* =========================================================
+   ABOUT GRID CARDS
+========================================================= */
+
+.about-grid .about-card {
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px 28px;
+}
+
+
+.about-grid .about-card > p {
+
+    color:
+        rgba(255,255,255,0.65);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+
+/* =========================================================
+   CLICKABLE CARD
+   Nur verlinkte Cards bewegen sich
+========================================================= */
+
+.about-card-link {
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.about-card-link:hover {
+
+    transform:
+        translateY(-3px);
+
+    border-color:
+        rgba(56,189,248,0.45);
+
+    background:
+        rgba(255,255,255,0.025);
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.25);
+}
+
+
+
+/* =========================================================
+   LOGOS
+========================================================= */
+
+.about-logo {
+
+    width: 58px;
+
+    height: 58px;
+
+    object-fit: contain;
+
+    margin-bottom: 8px;
+}
+
+
+.logo-aspnet {
+
+    width: 64px;
+
+    height: 64px;
+}
+
+
+.logo-ad {
+
+    width: 58px;
+
+    height: 58px;
+}
+
+
+.logo-azure {
+
+    width: 62px;
+
+    height: 62px;
+}
+
+
+
+/* =========================================================
+   FEATURE GRID
+========================================================= */
+
+.about-feature-grid {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+
+    margin-top: 8px;
+}
+
+
+
+/* =========================================================
+   FEATURE
+========================================================= */
+
+.about-feature {
+
+    padding: 24px 22px;
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.015);
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+
+
+/* =========================================================
+   FEATURE HOVER
+   Auch diese Kacheln bleiben statisch
+========================================================= */
+
+.about-feature:hover {
+
+    border-color:
+        rgba(56,189,248,0.30);
+
+    background:
+        rgba(255,255,255,0.025);
+}
+
+
+.about-feature h3 {
+
+    margin: 0 0 10px;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 400;
+
+    letter-spacing: 0.06em;
+
+    text-transform: uppercase;
+}
+
+
+.about-feature p {
+
+    margin: 0;
+
+    color:
+        rgba(255,255,255,0.65);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+
+/* =========================================================
+   OUTLOOK
+========================================================= */
+
+.about-outlook {
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+.about-outlook > p {
+
+    max-width: 800px;
+
+    text-align: center;
+}
+
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.about-button {
+
+    display: inline-block;
+
+    margin-top: 8px;
+
+    padding: 12px 28px;
+
+    border: 1px solid rgba(255,255,255,0.14);
+
+    border-radius: 10px;
+
+    background:
+        rgba(255,255,255,0.03);
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    text-transform: uppercase;
+
+    font-size: 12px;
+
+    letter-spacing: 0.12em;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.about-button:hover {
+
+    background:
+        rgba(255,255,255,0.07);
+
+    border-color:
+        rgba(56,189,248,0.45);
+
+    box-shadow:
+        0 0 18px rgba(56,189,248,0.14);
+
+    transform:
+        translateY(-2px);
+}
+
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .about-detail {
+
+        padding:
+            20px 20px 90px;
+    }
+
+
+    .about-header {
+
+        padding:
+            35px 30px;
+    }
+
+
+    .about-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    .about-feature-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+
+/* =========================================================
+   SMARTPHONE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .about-detail {
+
+        padding:
+            15px 10px 70px;
+
+        gap: 20px;
+    }
+
+
+    .about-header {
+
+        padding:
+            30px 22px;
+    }
+
+
+    .about-card {
+
+        padding:
+            28px 22px;
+
+        gap: 16px;
+    }
+
+
+    .about-header h1 {
+
+        font-size: 27px;
+
+        letter-spacing: 0.09em;
+    }
+
+
+    .about-subtitle {
+
+        font-size: 13px;
+    }
+
+
+    .about-card > h2 {
+
+        font-size: 18px;
+    }
+
+
+    .about-card > p {
+
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+
+    .about-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .about-feature-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .about-logo {
+
+        margin-bottom: 4px;
+    }
+
+}

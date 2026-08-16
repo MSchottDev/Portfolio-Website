@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Portfolio von Matthias Schott">
+    <meta name="description"
+          content="Virtual Laboratory – virtuelle Windows-Infrastruktur von Matthias Schott">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/vlab.css">
 
-    <link rel="preload" href="images/bg.jpg" as="image" fetchpriority="high">
+    <link rel="preload"
+          href="images/bg.jpg"
+          as="image"
+          fetchpriority="high">
+
     <link rel="icon" href="images/favicon.ico">
 
-    <title>Portfolio – Matthias Schott</title>
+    <title>vLab – Matthias Schott</title>
 </head>
 
-<body class="landing">
+
+<body class="vlab">
+
 
 <header class="top-bar">
 
@@ -24,48 +33,722 @@
         <span>Matthias Schott</span>
     </div>
 
+
     <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">Über mich</a>
-        <a href="projects.html">Projekte</a>
-        <a href="vlab.html" class="active">vLab</a>
-        <a href="skills.html">Skills</a>
-        <a href="contact.html">Kontakt</a>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="about.html">
+            Über mich
+        </a>
+
+        <a href="projects.html">
+            Projekte
+        </a>
+
+        <a href="vlab.html" class="active">
+            vLab
+        </a>
+
+        <a href="skills.html">
+            Skills
+        </a>
+
+        <a href="contact.html">
+            Kontakt
+        </a>
+
     </nav>
 
 </header>
 
-<main class="hero-section">
 
-    <div class="hero-content">
 
-        
+<div class="scroll-area">
 
-        
+<main class="vlab-detail">
+
+
+    <!-- =====================================================
+         BACK LINK
+    ====================================================== -->
+
+    <a href="index.html" class="back-link">
+        ← Zurück
+    </a>
+
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <section class="vlab-header glass">
+
+        <div class="vlab-header-content">
+
+
+            <div class="vlab-header-text">
+
+                <div class="vlab-category">
+                    VIRTUAL LABORATORY
+                </div>
+
+
+                <h1>
+                    Virtuelle Windows-Infrastruktur
+                </h1>
+
+
+                <p class="vlab-subtitle">
+
+                    Aufbau und Administration einer eigenen
+                    virtualisierten Windows-Testumgebung zur
+                    praktischen Vertiefung meiner Kenntnisse in
+                    Systemadministration und Netzwerktechnik.
+
+                </p>
+
+            </div>
+
+
+            <div class="vlab-tech">
+
+                <span>Hyper-V</span>
+                <span>Windows Server</span>
+                <span>Active Directory</span>
+                <span>Windows 11</span>
+                <span>DNS</span>
+                <span>DHCP</span>
+                <span>PowerShell</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         INTRO
+    ====================================================== -->
+
+    <section class="vlab-card glass">
+
+        <h2>
+            Mein vLab
+        </h2>
+
 
         <p>
-            Inhalt "vLab und Beschribung"
+
+            Mein Virtual Laboratory ist eine eigene Testumgebung,
+            in der ich verschiedene Aufgaben der
+            Windows-Administration praktisch nachvollziehen und
+            ausprobieren kann.
+
         </p>
 
-        
 
-    </div>
+        <p>
+
+            Die Umgebung wird vollständig virtualisiert betrieben
+            und besteht derzeit aus einem Windows Server sowie
+            zwei Windows-11-Clients.
+
+        </p>
+
+
+        <p>
+
+            Der Windows Server übernimmt dabei die Rolle eines
+            Domain Controllers. Die Windows-11-Clients wurden in
+            die Domäne integriert und bilden gemeinsam mit dem
+            Server ein kleines, isoliertes Testnetzwerk.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ARCHITECTURE
+    ====================================================== -->
+
+    <section class="vlab-card glass">
+
+        <h2>
+            Infrastruktur
+        </h2>
+
+
+        <p class="vlab-section-intro">
+
+            Die aktuelle Umgebung bildet eine kleine
+            Windows-Domäneninfrastruktur ab.
+
+        </p>
+
+
+        <div class="vlab-architecture">
+
+
+            <div class="vlab-layer">
+
+                <div class="vlab-layer-title">
+                    Windows Server
+                </div>
+
+                <div class="vlab-layer-tech">
+                    Domain Controller
+                </div>
+
+                <p>
+                    Active Directory
+                </p>
+
+            </div>
+
+
+            <div class="vlab-arrow">
+                ↓
+            </div>
+
+
+            <div class="vlab-network">
+
+                <div class="vlab-network-title">
+                    Virtuelles Netzwerk
+                </div>
+
+                <div class="vlab-network-description">
+                    Kommunikation innerhalb der Testumgebung
+                </div>
+
+            </div>
+
+
+            <div class="vlab-arrow">
+                ↓
+            </div>
+
+
+            <div class="vlab-client-grid">
+
+
+                <div class="vlab-client">
+
+                    <div class="vlab-client-title">
+                        Windows 11
+                    </div>
+
+                    <div class="vlab-client-name">
+                        Client 01
+                    </div>
+
+                </div>
+
+
+                <div class="vlab-client">
+
+                    <div class="vlab-client-title">
+                        Windows 11
+                    </div>
+
+                    <div class="vlab-client-name">
+                        Client 02
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CURRENT SETUP
+    ====================================================== -->
+
+    <section class="vlab-card glass">
+
+        <h2>
+            Aktueller Aufbau
+        </h2>
+
+
+        <div class="vlab-feature-grid">
+
+
+            <div class="vlab-feature">
+
+                <h3>
+                    Virtualisierung
+                </h3>
+
+                <p>
+
+                    Aufbau und Verwaltung mehrerer virtueller
+                    Maschinen mit
+                    <span class="tech-term">Hyper-V</span>.
+
+                </p>
+
+            </div>
+
+
+            <div class="vlab-feature">
+
+                <h3>
+                    Domain Controller
+                </h3>
+
+                <p>
+
+                    Installation und Konfiguration eines
+                    <span class="tech-term">Windows Server</span>
+                    als Domain Controller.
+
+                </p>
+
+            </div>
+
+
+            <div class="vlab-feature">
+
+                <h3>
+                    Active Directory
+                </h3>
+
+                <p>
+
+                    Einrichtung einer eigenen
+                    <span class="tech-term">Active-Directory-Domäne</span>
+                    und Integration der Clients.
+
+                </p>
+
+            </div>
+
+
+            <div class="vlab-feature">
+
+                <h3>
+                    Windows Clients
+                </h3>
+
+                <p>
+
+                    Installation und Konfiguration von zwei
+                    <span class="tech-term">Windows-11-Clients</span>
+                    sowie deren Aufnahme in die Domäne.
+
+                </p>
+
+            </div>
+
+
+            <div class="vlab-feature">
+
+                <h3>
+                    Netzwerk
+                </h3>
+
+                <p>
+
+                    Aufbau einer isolierten virtuellen
+                    Netzwerkumgebung für die Kommunikation
+                    zwischen Server und Clients.
+
+                </p>
+
+            </div>
+
+
+            <div class="vlab-feature">
+
+                <h3>
+                    Administration
+                </h3>
+
+                <p>
+
+                    Praktisches Erproben von
+                    Windows-Administrationsaufgaben in einer
+                    kontrollierten Testumgebung.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ACTIVE DIRECTORY
+    ====================================================== -->
+
+    <section class="vlab-card glass">
+
+        <h2>
+            Active Directory
+        </h2>
+
+
+        <p>
+
+            Ein zentraler Bestandteil des vLabs ist die
+            Einrichtung einer eigenen
+            <span class="tech-term">Active-Directory-Domäne</span>.
+
+        </p>
+
+
+        <p>
+
+            Dadurch kann ich die grundlegenden Abläufe einer
+            zentral verwalteten Windows-Umgebung nachvollziehen:
+            Benutzer melden sich an der Domäne an und die Clients
+            werden nicht mehr ausschließlich lokal verwaltet.
+
+        </p>
+
+
+        <p>
+
+            Die Umgebung dient dabei insbesondere dazu,
+            Benutzerverwaltung, Gruppen, Berechtigungen und
+            Gruppenrichtlinien schrittweise praktisch umzusetzen.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ROADMAP
+    ====================================================== -->
+
+    <section class="vlab-card glass">
+
+        <h2>
+            Geplante Erweiterungen
+        </h2>
+
+
+        <p class="vlab-section-intro">
+
+            Das vLab befindet sich im kontinuierlichen Ausbau.
+            Die nächsten Schritte konzentrieren sich auf die
+            praktische Administration einer vollständigen
+            Windows-Domänenumgebung.
+
+        </p>
+
+
+        <div class="vlab-roadmap">
+
+
+            <div class="vlab-roadmap-item">
+
+                <div class="vlab-roadmap-number">
+                    01
+                </div>
+
+                <div>
+
+                    <h3>
+                        Benutzer und Gruppen
+                    </h3>
+
+                    <p>
+                        Aufbau einer strukturierten Benutzer-
+                        und Gruppenverwaltung im
+                        Active Directory.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="vlab-roadmap-item">
+
+                <div class="vlab-roadmap-number">
+                    02
+                </div>
+
+                <div>
+
+                    <h3>
+                        OU-Struktur
+                    </h3>
+
+                    <p>
+                        Strukturierung der Domäne mit
+                        Organisationseinheiten für Benutzer,
+                        Computer und weitere Objekte.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="vlab-roadmap-item">
+
+                <div class="vlab-roadmap-number">
+                    03
+                </div>
+
+                <div>
+
+                    <h3>
+                        Gruppenrichtlinien
+                    </h3>
+
+                    <p>
+                        Erstellung und Anwendung von
+                        Group Policies zur zentralen
+                        Konfiguration der Clients.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="vlab-roadmap-item">
+
+                <div class="vlab-roadmap-number">
+                    04
+                </div>
+
+                <div>
+
+                    <h3>
+                        Berechtigungen
+                    </h3>
+
+                    <p>
+                        Umsetzung verschiedener
+                        Benutzer- und Zugriffsszenarien
+                        mit NTFS- und Freigabeberechtigungen.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="vlab-roadmap-item">
+
+                <div class="vlab-roadmap-number">
+                    05
+                </div>
+
+                <div>
+
+                    <h3>
+                        Netzlaufwerke
+                    </h3>
+
+                    <p>
+                        Einrichtung zentraler Freigaben und
+                        automatischer Netzlaufwerke für
+                        unterschiedliche Benutzergruppen.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="vlab-roadmap-item">
+
+                <div class="vlab-roadmap-number">
+                    06
+                </div>
+
+                <div>
+
+                    <h3>
+                        Netzwerkdrucker
+                    </h3>
+
+                    <p>
+                        Einbindung und zentrale Bereitstellung
+                        eines Netzwerkdruckers innerhalb der
+                        Domänenumgebung.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="vlab-roadmap-item">
+
+                <div class="vlab-roadmap-number">
+                    07
+                </div>
+
+                <div>
+
+                    <h3>
+                        DNS & DHCP
+                    </h3>
+
+                    <p>
+                        Vertiefung der zentralen
+                        Netzwerkdienste und deren
+                        Zusammenspiel mit Active Directory.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="vlab-roadmap-item">
+
+                <div class="vlab-roadmap-number">
+                    08
+                </div>
+
+                <div>
+
+                    <h3>
+                        PowerShell
+                    </h3>
+
+                    <p>
+                        Automatisierung und Administration
+                        wiederkehrender Aufgaben mit
+                        PowerShell.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         LEARNING
+    ====================================================== -->
+
+    <section class="vlab-card glass vlab-learning">
+
+        <h2>
+            Lernziel
+        </h2>
+
+
+        <p>
+
+            Das vLab ist für mich eine praktische Ergänzung zu
+            meiner Ausbildung zum Fachinformatiker für
+            Anwendungsentwicklung.
+
+        </p>
+
+
+        <p>
+
+            Ziel ist es, meine Kenntnisse im Bereich
+            <span class="tech-term">IT-Administration</span>
+            kontinuierlich auszubauen und typische Aufgaben einer
+            Windows-basierten Unternehmensumgebung selbstständig
+            umsetzen und nachvollziehen zu können.
+
+        </p>
+
+
+        <p>
+
+            Durch die Virtualisierung kann ich verschiedene
+            Konfigurationen und Administrationsszenarien testen,
+            ohne dabei produktive Systeme zu beeinflussen.
+
+        </p>
+
+
+        <div class="vlab-learning-list">
+
+            <span>Virtualisierung</span>
+            <span>Windows Server</span>
+            <span>Active Directory</span>
+            <span>Netzwerkadministration</span>
+            <span>Benutzerverwaltung</span>
+            <span>Gruppenrichtlinien</span>
+            <span>Berechtigungen</span>
+            <span>PowerShell</span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         BACK LINK
+    ====================================================== -->
+
+    <a href="index.html" class="back-link bottom-back-link">
+        ← Zurück zur Startseite
+    </a>
+
 
 </main>
+
+</div>
+
+
 
 <footer class="bottom-bar">
 
     <div></div>
 
     <div class="footer-links">
-        <a href="impressum.html">Impressum</a>
+
+        <a href="impressum.html">
+            Impressum
+        </a>
+
         <span class="divider"></span>
-        <a href="datenschutz.html">Datenschutz</a>
+
+        <a href="datenschutz.html">
+            Datenschutz
+        </a>
+
     </div>
 
-    <div class="footer-right">© 2026 Matthias Schott</div>
+
+    <div class="footer-right">
+        © 2026 Matthias Schott
+    </div>
 
 </footer>
+
 
 </body>
 </html>
