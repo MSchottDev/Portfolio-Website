@@ -17,6 +17,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const email = document.getElementById("email").value.trim();
         const message = document.getElementById("message").value.trim();
 
+        console.log("Name:", name);
+        console.log("Email:", email);
+        console.log("Message:", message);
+
         if (!name || !email || !message) {
 
             successMessage.textContent =
