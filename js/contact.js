@@ -1,10 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const form = document.getElementById("contactForm");
-    const button = document.querySelector(".contact-button");
-    const successMessage = document.getElementById("contactSuccess");
 
-    if (!form || !button || !successMessage) {
+    /* =====================================================
+       ELEMENTE
+    ===================================================== */
+
+    const form =
+        document.getElementById("contactForm");
+
+    const button =
+        document.querySelector(".contact-button");
+
+    const successMessage =
+        document.getElementById("contactSuccess");
+
+    const intro =
+        document.getElementById("contactIntro");
+
+
+    /* =====================================================
+       INITIALISIERUNG PRÜFEN
+    ===================================================== */
+
+    if (!form || !button || !successMessage || !intro) {
 
         console.error(
             "Kontaktformular konnte nicht initialisiert werden."
@@ -14,15 +32,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
+
+    /* =====================================================
+       FORMULAR ABSENDEN
+    ===================================================== */
+
     form.addEventListener("submit", async (event) => {
+
 
         event.preventDefault();
 
 
-        /*
-         * Formularwerte zum Zeitpunkt des Absendevorgangs
-         * auslesen.
-         */
+        /* =================================================
+           EINGABEN AUSLESEN
+        ================================================= */
 
         const name =
             document.getElementById("name").value.trim();
@@ -34,31 +57,56 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("message").value.trim();
 
 
-        /*
-         * Eingaben prüfen
-         */
+
+        /* =================================================
+           EINGABEN PRÜFEN
+        ================================================= */
 
         if (!name || !email || !message) {
 
-            successMessage.textContent =
-                "Bitte füllen Sie alle Felder aus.";
+
+            successMessage.innerHTML = `
+                <p>
+                    Bitte füllen Sie alle Felder aus.
+                </p>
+            `;
+
 
             successMessage.classList.add("error");
+
             successMessage.style.display = "block";
+
 
             return;
         }
 
 
-        /*
-         * Button während des Sendens sperren
-         */
+
+        /* =================================================
+           BUTTON WÄHREND DES SENDENS SPERREN
+        ================================================= */
 
         button.disabled = true;
-        button.textContent = "Wird gesendet...";
+
+        button.textContent =
+            "Wird gesendet...";
+
+
+
+        /*
+         * Erfolgsmeldung während des Sendens ausblenden.
+         */
+
+        successMessage.style.display = "none";
+
 
 
         try {
+
+
+            /* =============================================
+               API REQUEST
+            ============================================= */
 
             const response = await fetch(
                 "https://app.newsletter.mschott.dev/api/contact",
@@ -78,6 +126,11 @@ document.addEventListener("DOMContentLoaded", () => {
             );
 
 
+
+            /* =============================================
+               RESPONSE AUSLESEN
+            ============================================= */
+
             const responseText =
                 await response.text();
 
@@ -93,6 +146,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 responseText
             );
 
+
+
+            /* =============================================
+               JSON PARSEN
+            ============================================= */
 
             let data = {};
 
@@ -111,9 +169,10 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
 
-            /*
-             * Fehler vom Backend behandeln
-             */
+
+            /* =============================================
+               SERVERFEHLER
+            ============================================= */
 
             if (!response.ok) {
 
@@ -126,30 +185,50 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
 
+
+            /* =============================================
+               ERFOLGREICH GESENDET
+            ============================================= */
+
+
             /*
-             * =====================================
-             * ERFOLGREICH GESENDET
-             * =====================================
+             * Formular zurücksetzen.
+             *
+             * Das ist nicht zwingend notwendig, weil es
+             * anschließend ausgeblendet wird, sorgt aber
+             * dafür, dass keine alten Daten im Formular
+             * verbleiben.
              */
 
             form.reset();
 
+
+
             /*
-             * Formular vollständig ausblenden.
-             * Dadurch kann keine zweite Nachricht
-             * über dasselbe Formular gesendet werden.
+             * Formular vollständig entfernen.
              */
 
             form.style.display = "none";
 
 
+
             /*
-             * Erfolgsmeldung anzeigen.
+             * Einleitung ebenfalls entfernen.
+             */
+
+            intro.style.display = "none";
+
+
+
+            /*
+             * Erfolgsmeldung vorbereiten.
              */
 
             successMessage.classList.remove("error");
 
+
             successMessage.innerHTML = `
+
                 <h2>
                     Nachricht erfolgreich versendet
                 </h2>
@@ -159,7 +238,14 @@ document.addEventListener("DOMContentLoaded", () => {
                     Ich habe Ihre Nachricht erhalten und
                     melde mich so schnell wie möglich bei Ihnen.
                 </p>
+
             `;
+
+
+
+            /*
+             * Erfolgsmeldung anzeigen.
+             */
 
             successMessage.style.display = "block";
 
@@ -167,32 +253,51 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         catch (error) {
 
+
+            /* =============================================
+               FEHLER
+            ============================================= */
+
             console.error(
                 "Fehler beim Senden der Kontaktanfrage:",
                 error
             );
 
 
+
             /*
-             * Bei einem Fehler darf der Benutzer
-             * das Formular erneut absenden.
+             * Formular bleibt sichtbar und kann erneut
+             * verwendet werden.
              */
 
             button.disabled = false;
-            button.textContent = "Senden";
 
+            button.textContent =
+                "Senden";
+
+
+
+            /*
+             * Fehlermeldung anzeigen.
+             */
 
             successMessage.classList.add("error");
 
+
             successMessage.innerHTML = `
+
                 <p>
                     Die Nachricht konnte leider nicht
-                    gesendet werden. Bitte versuchen Sie
-                    es später erneut.
+                    gesendet werden.
+                    Bitte versuchen Sie es später erneut.
                 </p>
+
             `;
 
-            successMessage.style.display = "block";
+
+            successMessage.style.display =
+                "block";
+
 
         }
 
