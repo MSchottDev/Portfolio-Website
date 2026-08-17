@@ -1,0 +1,497 @@
+/* =========================================================
+   ABOUT DETAIL PAGES
+   Development / Infrastructure / Cloud
+========================================================= */
+
+
+/* =========================================================
+   DETAIL PAGE
+========================================================= */
+
+.about-detail {
+
+    width: 100%;
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding: 0px 30px 100px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 28px;
+}
+
+
+/* =========================================================
+   DETAIL HEADER
+========================================================= */
+
+.about-header {
+
+    width: 100%;
+
+    padding: 38px 45px;
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.015);
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* =========================================================
+   HEADER HOVER
+========================================================= */
+
+.about-header:hover {
+
+    background: rgba(255, 255, 255, 0.025);
+
+    border-color:
+        rgba(56, 189, 248, 0.30);
+
+    box-shadow:
+        0 0 18px rgba(56, 189, 248, 0.10);
+}
+
+
+/* =========================================================
+   HEADER CONTENT
+========================================================= */
+
+.about-header-content {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+
+/* =========================================================
+   CATEGORY
+========================================================= */
+
+.about-category {
+
+    margin-bottom: 12px;
+
+    color:
+        rgba(56, 189, 248, 0.75);
+
+    font-size: 11px;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.about-header h1 {
+
+    margin: 0 0 14px;
+
+    color: #ffffff;
+
+    font-size: 38px;
+
+    font-weight: 300;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   SUBTITLE
+========================================================= */
+
+.about-subtitle {
+
+    max-width: 760px;
+
+    margin: 0;
+
+    color:
+        rgba(255, 255, 255, 0.65);
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   DETAIL CARD
+========================================================= */
+
+.about-card {
+
+    width: 100%;
+
+    padding: 38px 45px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.015);
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.about-card:hover {
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+    border-color:
+        rgba(56, 189, 248, 0.30);
+
+    box-shadow:
+        0 0 18px rgba(56, 189, 248, 0.10);
+}
+
+
+/* =========================================================
+   CARD HEADINGS
+========================================================= */
+
+.about-card > h2 {
+
+    margin: 0 0 4px;
+
+    color: #ffffff;
+
+    font-size: 22px;
+
+    font-weight: 300;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   CARD TEXT
+========================================================= */
+
+.about-card > p {
+
+    margin: 0;
+
+    color:
+        rgba(255, 255, 255, 0.72);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   TECHNICAL TERMS
+========================================================= */
+
+.tech-text {
+
+    color:
+        rgba(56, 189, 248, 0.85);
+
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   LOGO CONTAINER
+========================================================= */
+
+.about-logo-container {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-bottom: 2px;
+}
+
+
+/* =========================================================
+   ABOUT LOGO
+========================================================= */
+
+.about-logo {
+
+    width: 58px;
+
+    height: 58px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   ASP.NET LOGO
+========================================================= */
+
+.logo-aspnet {
+
+    width: 64px;
+
+    height: 64px;
+}
+
+
+/* =========================================================
+   ACTIVE DIRECTORY LOGO
+========================================================= */
+
+.logo-ad {
+
+    width: 58px;
+
+    height: 58px;
+}
+
+
+/* =========================================================
+   AZURE LOGO
+========================================================= */
+
+.logo-azure {
+
+    width: 62px;
+
+    height: 62px;
+}
+
+
+/* =========================================================
+   BACK LINK
+========================================================= */
+
+.back-link {
+
+    align-self: center;
+
+    margin-top: 2px;
+
+    color:
+        rgba(255, 255, 255, 0.70);
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    letter-spacing: 0.06em;
+
+    transition:
+        color 0.25s ease,
+        text-shadow 0.25s ease;
+}
+
+
+.back-link:hover {
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 8px rgba(56, 189, 248, 0.35);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .about-detail {
+
+        padding:
+            110px 20px 90px;
+
+        gap: 24px;
+    }
+
+
+    .about-header {
+
+        padding:
+            35px 30px;
+    }
+
+
+    .about-card {
+
+        padding:
+            35px 30px;
+    }
+
+
+    .about-header h1 {
+
+        font-size: 32px;
+    }
+
+
+    .about-subtitle {
+
+        font-size: 14px;
+    }
+
+}
+
+
+/* =========================================================
+   SMARTPHONE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .about-detail {
+
+        padding:
+            100px 10px 70px;
+
+        gap: 20px;
+    }
+
+
+    .about-header {
+
+        padding:
+            30px 22px;
+    }
+
+
+    .about-card {
+
+        padding:
+            28px 22px;
+
+        gap: 16px;
+    }
+
+
+    .about-header h1 {
+
+        font-size: 27px;
+
+        letter-spacing: 0.09em;
+    }
+
+
+    .about-category {
+
+        font-size: 10px;
+
+        letter-spacing: 0.13em;
+    }
+
+
+    .about-subtitle {
+
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+
+    .about-card > h2 {
+
+        font-size: 18px;
+
+        letter-spacing: 0.07em;
+    }
+
+
+    .about-card > p {
+
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+
+    .about-logo {
+
+        margin-bottom: 2px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL SMARTPHONES
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .about-detail {
+
+        padding-left: 8px;
+
+        padding-right: 8px;
+    }
+
+
+    .about-header {
+
+        padding:
+            26px 18px;
+    }
+
+
+    .about-card {
+
+        padding:
+            26px 18px;
+    }
+
+
+    .about-header h1 {
+
+        font-size: 24px;
+    }
+
+}

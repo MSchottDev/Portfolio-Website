@@ -2,39 +2,58 @@
 <html lang="de">
 
 <head>
+
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Python-Sensor-Testsystem mit PyQt5, automatisierter Sensorerkennung, Metadatenauswertung, Distanz- und Amplitudentests sowie Testreports – IHK-Facharbeit von Matthias Schott">
+          content="IHK-Facharbeit von Matthias Schott: Entwicklung eines Python-basierten Sensor-Testsystems mit PyQt5, automatisierter Sensorerkennung, Hardware-Kommunikation, Pytest, Testreports und Sensorsimulation. Abschlussnote 2.">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet"
+          href="css/style.css">
 
-    <link rel="stylesheet" href="css/project-detail.css">
+    <link rel="stylesheet"
+          href="css/project-detail.css">
 
-    <script src="js/gallery.js" defer></script>
+    <script src="js/gallery.js"
+            defer></script>
 
     <link rel="preload"
           href="images/bg.jpg"
           as="image"
           fetchpriority="high">
 
-    <link rel="icon" href="images/favicon.ico">
+    <link rel="icon"
+          href="images/favicon.ico">
 
-    <title>Sensor-Testsystem – Matthias Schott</title>
+    <title>
+        Sensor-Testsystem – IHK-Facharbeit – Matthias Schott
+    </title>
+
 </head>
 
 
 <body class="landing">
 
 
+<!-- =========================================
+     HEADER
+========================================= -->
+
 <header class="top-bar">
 
     <div class="title">
+
         Portfolio
-        <span>Matthias Schott</span>
+
+        <span>
+            Matthias Schott
+        </span>
+
     </div>
+
 
     <nav class="main-nav">
 
@@ -46,7 +65,8 @@
             Über mich
         </a>
 
-        <a href="projects.html" class="active">
+        <a href="projects.html"
+           class="active">
             Projekte
         </a>
 
@@ -82,8 +102,11 @@
          ZURÜCK
     ====================================== -->
 
-    <a href="projects.html" class="back-link">
+    <a href="projects.html"
+       class="back-link">
+
         ← Zurück zur Projektübersicht
+
     </a>
 
 
@@ -96,38 +119,90 @@
 
         <div class="project-header-content">
 
+
             <div>
 
                 <p class="project-category">
-                    PYTHON · GUI · TESTAUTOMATISIERUNG
+
+                    IHK-FACHARBEIT · PYTHON · GUI · TESTAUTOMATISIERUNG
+
                 </p>
 
+
                 <h1>
+
                     Sensor-Testsystem
+
                 </h1>
 
+
                 <p class="project-subtitle">
+
                     Entwicklung einer Python-Anwendung zur
-                    automatisierten Sensorerkennung,
-                    Metadatenauswertung sowie Durchführung
-                    von Distanz- und Amplitudentests.
+                    automatisierten Erkennung und Prüfung von
+                    Sensoren mit grafischer Benutzeroberfläche,
+                    Hardware-Kommunikation, automatisierten Tests
+                    und Testreports.
+
+                </p>
+
+
+                <p class="project-subtitle">
+
+                    <strong>
+                        IHK-Abschlussnote: 2
+                    </strong>
+
                 </p>
 
             </div>
+
 
 
             <div class="project-tech">
 
-                <span>Python</span>
-                <span>PyQt5</span>
-                <span>Pytest</span>
-                <span>Sensor API</span>
-                <span>Serial Communication</span>
-                <span>Testautomatisierung</span>
-                <span>Subprocess</span>
-                <span>GUI Development</span>
+                <span>
+                    Python
+                </span>
+
+                <span>
+                    PyQt5
+                </span>
+
+                <span>
+                    Pytest
+                </span>
+
+                <span>
+                    Sensor API
+                </span>
+
+                <span>
+                    Serial Communication
+                </span>
+
+                <span>
+                    COM-Ports
+                </span>
+
+                <span>
+                    Testautomatisierung
+                </span>
+
+                <span>
+                    Subprocess
+                </span>
+
+                <span>
+                    GUI Development
+                </span>
+
+                <span>
+                    Hardwaresimulation
+                </span>
 
             </div>
+
 
         </div>
 
@@ -145,42 +220,63 @@
             Projektbeschreibung
         </h2>
 
-        <p>
-            Im Rahmen meiner IHK-Facharbeit habe ich ein
-            Python-basiertes Testsystem zur Erkennung und
-            Überprüfung von Sensoren entwickelt.
-        </p>
 
         <p>
-            Ziel der Anwendung war es, mehrere Sensoren
-            automatisch zu erkennen, deren technische
-            Metadaten auszulesen und anschließend definierte
-            Funktionstests durchführen zu können.
+
+            Im Rahmen meiner
+            <strong>IHK-Facharbeit zum Fachinformatiker für
+            Anwendungsentwicklung</strong>
+            habe ich ein Python-basiertes Testsystem zur
+            automatisierten Erkennung und Überprüfung von
+            Sensoren entwickelt.
+
         </p>
 
-        <p>
-            Die Anwendung verfügt über eine grafische
-            Benutzeroberfläche, über die angeschlossene
-            Sensoren verwaltet und einzelne oder mehrere
-            Tests gestartet werden können.
-        </p>
 
         <p>
-            Neben der manuellen Anzeige von Messwerten können
-            automatisierte Tests für <strong>Distanz</strong>
-            und <strong>Amplitude</strong> ausgeführt werden.
-            Die Ergebnisse werden anschließend als
-            Testreports gespeichert und innerhalb der
-            Anwendung angezeigt.
+
+            Ziel des Projekts war es, die bisher erforderlichen
+            manuellen Prüfschritte durch eine strukturierte
+            Softwarelösung zu unterstützen und wiederholbare
+            Testabläufe zu ermöglichen.
+
         </p>
 
+
         <p>
+
+            Die Anwendung erkennt angeschlossene Sensoren,
+            liest deren technische Metadaten aus und stellt
+            diese innerhalb einer grafischen Benutzeroberfläche
+            dar. Anschließend können definierte Prüfungen für
+            einzelne Sensoren oder für mehrere Sensoren
+            automatisiert durchgeführt werden.
+
+        </p>
+
+
+        <p>
+
+            Zu den implementierten Prüfungen gehören insbesondere
+            <strong>Distanz- und Amplitudentests</strong>.
+            Die Testergebnisse werden ausgewertet, als
+            Testreports gespeichert und innerhalb der Anwendung
+            als PASS- bzw. FAIL-Ergebnis dargestellt.
+
+        </p>
+
+
+        <p>
+
             Für die Weiterentwicklung und Demonstration des
-            Projekts wurde zusätzlich eine
+            Systems wurde zusätzlich eine
             <strong>Sensorsimulation</strong> integriert.
-            Dadurch kann die Anwendung auch ohne angeschlossene
-            Hardware ausgeführt und getestet werden.
+            Dadurch kann die Anwendung auch ohne die ursprünglich
+            verwendete Sensorhardware ausgeführt und getestet
+            werden.
+
         </p>
+
 
     </section>
 
@@ -203,16 +299,19 @@
             <div class="project-feature">
 
                 <h3>
-                    Sensorerkennung
+                    Automatische Sensorerkennung
                 </h3>
 
                 <p>
-                    Die Anwendung durchsucht verfügbare
-                    Schnittstellen und erkennt angeschlossene
-                    Sensoren automatisch.
+
+                    Die Anwendung ermittelt verfügbare
+                    Schnittstellen und überprüft diese auf
+                    angeschlossene Sensoren.
+
                 </p>
 
             </div>
+
 
 
             <div class="project-feature">
@@ -222,12 +321,15 @@
                 </h3>
 
                 <p>
+
                     Nach der Erkennung werden unter anderem
                     Sensortyp, Seriennummer und verwendeter
                     COM-Port ausgelesen und in der GUI dargestellt.
+
                 </p>
 
             </div>
+
 
 
             <div class="project-feature">
@@ -237,12 +339,15 @@
                 </h3>
 
                 <p>
-                    Der aktuelle Distanzmesswert eines Sensors
-                    kann direkt über die grafische Oberfläche
-                    abgefragt und angezeigt werden.
+
+                    Aktuelle Messwerte eines Sensors können
+                    direkt über die grafische Oberfläche
+                    abgefragt und dargestellt werden.
+
                 </p>
 
             </div>
+
 
 
             <div class="project-feature">
@@ -252,13 +357,15 @@
                 </h3>
 
                 <p>
-                    Für jeden erkannten Sensor kann ein
-                    automatisierter Distanztest durchgeführt
-                    werden. Die Messwerte werden gegen definierte
-                    Grenzwerte geprüft.
+
+                    Die gemessenen Distanzwerte werden gegen
+                    definierte Grenzwerte geprüft und
+                    automatisch bewertet.
+
                 </p>
 
             </div>
+
 
 
             <div class="project-feature">
@@ -268,12 +375,15 @@
                 </h3>
 
                 <p>
+
                     Zusätzlich kann die Signalstärke bzw.
-                    Amplitude der Sensoren automatisiert
+                    Amplitude eines Sensors automatisiert
                     überprüft werden.
+
                 </p>
 
             </div>
+
 
 
             <div class="project-feature">
@@ -283,12 +393,17 @@
                 </h3>
 
                 <p>
-                    Über die Funktion „TEST ALL“ können
-                    Distanz- und Amplitudentests nacheinander
-                    für die erkannten Sensoren ausgeführt werden.
+
+                    Über die Funktion
+                    <strong>„TEST ALL“</strong>
+                    können die vorgesehenen Prüfungen
+                    nacheinander für alle erkannten Sensoren
+                    ausgeführt werden.
+
                 </p>
 
             </div>
+
 
 
             <div class="project-feature">
@@ -298,26 +413,35 @@
                 </h3>
 
                 <p>
-                    Die Testergebnisse werden über Pytest erzeugt,
-                    als Reports gespeichert und anschließend in
-                    der Anwendung dargestellt.
+
+                    Die automatisierten Tests werden mit
+                    Pytest ausgeführt. Die Ergebnisse werden
+                    als Reports gespeichert und anschließend
+                    innerhalb der Anwendung dargestellt.
+
                 </p>
 
             </div>
+
 
 
             <div class="project-feature">
 
                 <h3>
-                    PASS / FAIL Status
+                    PASS / FAIL Bewertung
                 </h3>
 
                 <p>
-                    Die Oberfläche visualisiert das Ergebnis
-                    jedes Tests unmittelbar als PASS oder FAIL.
+
+                    Die Testergebnisse werden unmittelbar als
+                    PASS oder FAIL visualisiert und können
+                    anschließend anhand des Reports analysiert
+                    werden.
+
                 </p>
 
             </div>
+
 
 
             <div class="project-feature">
@@ -327,10 +451,12 @@
                 </h3>
 
                 <p>
+
                     Eine integrierte Simulation stellt Sensoren,
-                    Messwerte und Metadaten bereit, sodass das
-                    Projekt auch ohne physische Hardware
+                    Metadaten und Messwerte bereit, sodass die
+                    Anwendung auch ohne physische Hardware
                     ausgeführt werden kann.
+
                 </p>
 
             </div>
@@ -352,17 +478,19 @@
             Projekt-Einblicke
         </h2>
 
+
         <p class="project-section-intro">
-            Screenshots zeigen die grafische Benutzeroberfläche,
-            die Sensorerkennung sowie die Durchführung und
-            Auswertung der automatisierten Tests.
+
+            Ausgewählte Screenshots zeigen die grafische
+            Benutzeroberfläche, die Sensorerkennung sowie die
+            Durchführung und Auswertung der automatisierten
+            Tests.
+
         </p>
 
 
         <div class="gallery-grid">
 
-
-            <!-- Bild 1 -->
 
             <button class="gallery-item"
                     data-image="images/projects/sensortest/GUI.png"
@@ -374,7 +502,6 @@
             </button>
 
 
-            <!-- Bild 2 -->
 
             <button class="gallery-item"
                     data-image="images/projects/sensortest/detectedSensors.png"
@@ -386,31 +513,28 @@
             </button>
 
 
-            <!-- Bild 3 -->
 
             <button class="gallery-item"
                     data-image="images/projects/sensortest/distanceTest.png"
-                    data-title="Distanztest">
+                    data-title="Automatisierter Distanztest">
 
                 <img src="images/projects/sensortest/distanceTest.png"
-                     alt="Durchführung des Distanztests">
+                     alt="Durchführung des automatisierten Distanztests">
 
             </button>
 
 
-            <!-- Bild 4 -->
 
             <button class="gallery-item"
                     data-image="images/projects/sensortest/amplitudeTest.png"
-                    data-title="Amplitudentest">
+                    data-title="Automatisierter Amplitudentest">
 
                 <img src="images/projects/sensortest/amplitudeTest.png"
-                     alt="Durchführung des Amplitudentests">
+                     alt="Durchführung des automatisierten Amplitudentests">
 
             </button>
 
 
-            <!-- Bild 5 -->
 
             <button class="gallery-item"
                     data-image="images/projects/sensortest/testReport.png"
@@ -422,7 +546,6 @@
             </button>
 
 
-            <!-- Bild 6 -->
 
             <button class="gallery-item"
                     data-image="images/projects/sensortest/sensorSimulation.png"
@@ -538,6 +661,7 @@
 
             </div>
 
+
         </div>
 
 
@@ -545,18 +669,18 @@
 
             Die Anwendung ist in mehrere funktionale Bereiche
             aufgeteilt. Die PyQt5-Oberfläche übernimmt die
-            Benutzerinteraktion und stellt erkannte Sensoren
-            sowie Testergebnisse dar.
+            Benutzerinteraktion und stellt erkannte Sensoren,
+            Messwerte und Testergebnisse dar.
 
             Die Sensorverwaltung kapselt die Erkennung und
-            Verwaltung der Sensorinstanzen. Über die Sensor-
-            Schnittstelle werden Metadaten und Messwerte
+            Verwaltung der Sensorinstanzen. Über die
+            Sensorschnittstelle werden Metadaten und Messwerte
             ausgelesen.
 
-            Die eigentlichen Prüfungen werden über Pytest
-            automatisiert ausgeführt. Die Testprozesse werden
-            aus der Anwendung heraus gestartet und ihre
-            Ergebnisse anschließend als Reports verarbeitet.
+            Die eigentlichen Prüfungen werden automatisiert über
+            Pytest ausgeführt. Die Testprozesse werden aus der
+            Anwendung heraus gestartet und ihre Ergebnisse
+            anschließend als Reports verarbeitet.
 
         </p>
 
@@ -574,18 +698,24 @@
             Sensorerkennung und Metadaten
         </h2>
 
+
         <p>
+
             Beim Start der Sensorerkennung werden die verfügbaren
             COM-Schnittstellen ermittelt und anschließend auf
             vorhandene Sensoren überprüft.
+
         </p>
 
+
         <p>
+
             Erkannte Sensoren werden in einer zentralen
-            <strong>SensorRegistry</strong> verwaltet. Dadurch
-            können die Sensorinstanzen innerhalb der Anwendung
-            gezielt angesprochen und für Messungen und Tests
-            verwendet werden.
+            <strong>SensorRegistry</strong> verwaltet.
+            Dadurch können die Sensorinstanzen innerhalb der
+            Anwendung gezielt angesprochen und für Messungen
+            und Tests verwendet werden.
+
         </p>
 
 
@@ -660,24 +790,33 @@
             Automatisierte Tests
         </h2>
 
+
         <p>
+
             Ein zentraler Bestandteil des Projekts ist die
             automatisierte Überprüfung der Sensoren.
             Die Tests werden mit <strong>Pytest</strong>
             umgesetzt und aus der grafischen Anwendung heraus
             gestartet.
+
         </p>
 
+
         <p>
-            Für den Distanztest wird der aktuelle Messwert
-            eines Sensors ausgelesen und gegen einen definierten
+
+            Für den Distanztest wird der aktuelle Messwert eines
+            Sensors ausgelesen und gegen einen definierten
             Wertebereich geprüft.
+
         </p>
 
+
         <p>
+
             Zusätzlich wird die Amplitude des Sensors überprüft.
             Die Tests können entweder einzeln für einen Sensor
             oder für alle erkannten Sensoren ausgeführt werden.
+
         </p>
 
 
@@ -735,22 +874,32 @@
             Testreports und Auswertung
         </h2>
 
+
         <p>
+
             Die Ergebnisse der automatisierten Prüfungen werden
-            für jeden Sensor separat gespeichert.
+            für die jeweiligen Tests gespeichert und können
+            anschließend analysiert werden.
+
         </p>
 
-        <p>
-            Die Anwendung startet die Pytest-Testfälle über einen
-            separaten Prozess und schreibt dessen Ausgabe in
-            entsprechende Report-Dateien.
-        </p>
 
         <p>
+
+            Die Anwendung startet die Pytest-Testfälle über
+            einen separaten Prozess und verarbeitet anschließend
+            deren Ergebnisse und Ausgaben.
+
+        </p>
+
+
+        <p>
+
             Über die grafische Oberfläche können die erzeugten
-            Reports anschließend angezeigt werden. Zusätzlich
-            wird das Testergebnis direkt am jeweiligen Sensor
-            visualisiert.
+            Reports angezeigt werden. Zusätzlich wird das
+            Testergebnis direkt am jeweiligen Sensor als
+            PASS oder FAIL visualisiert.
+
         </p>
 
 
@@ -766,7 +915,7 @@
                 <ul>
 
                     <li>
-                        Pytest beendet sich erfolgreich
+                        Grenzwerte werden eingehalten
                     </li>
 
                     <li>
@@ -800,7 +949,7 @@
                 <ul>
 
                     <li>
-                        Grenzwert wird nicht eingehalten
+                        Definierter Grenzwert wird nicht eingehalten
                     </li>
 
                     <li>
@@ -819,6 +968,7 @@
 
             </div>
 
+
         </div>
 
     </section>
@@ -835,32 +985,44 @@
             Sensorsimulation
         </h2>
 
+
         <p>
+
             Um das Projekt unabhängig von der ursprünglichen
             Sensorhardware ausführbar zu machen, wurde eine
             eigene Sensorsimulation integriert.
+
         </p>
 
+
         <p>
+
             Die simulierten Sensoren stellen dieselben
             grundlegenden Schnittstellen bereit, die auch von
             der eigentlichen Anwendung verwendet werden.
-            Dadurch kann die bestehende GUI- und Testlogik
+            Dadurch können bestehende GUI- und Testlogik
             weiterverwendet werden.
+
         </p>
 
-        <p>
-            Die Simulation erzeugt realistische Schwankungen
-            bei Distanz- und Amplitudenmesswerten. Zusätzlich
-            sind unterschiedliche Sensoren mit eigenen
-            Seriennummern, Sensortypen und Messwerten definiert.
-        </p>
 
         <p>
-            Ein Sensor ist bewusst so konfiguriert, dass er die
-            definierten Grenzwerte nicht erfüllt. Dadurch lässt
-            sich auch das Verhalten eines fehlgeschlagenen Tests
-            demonstrieren.
+
+            Die Simulation erzeugt unterschiedliche
+            Distanz- und Amplitudenmesswerte und stellt
+            verschiedene Sensoren mit eigenen Seriennummern,
+            Sensortypen und Messwerten bereit.
+
+        </p>
+
+
+        <p>
+
+            Ein Sensor ist bewusst so konfiguriert, dass er
+            definierte Grenzwerte nicht erfüllt. Dadurch lässt
+            sich auch das Verhalten eines fehlgeschlagenen
+            Tests demonstrieren.
+
         </p>
 
 
@@ -910,29 +1072,41 @@
             Grafische Benutzeroberfläche
         </h2>
 
-        <p>
-            Die Benutzeroberfläche wurde mit
-            <strong>PyQt5</strong> entwickelt und stellt die
-            wichtigsten Funktionen des Testsystems zentral zur
-            Verfügung.
-        </p>
 
         <p>
+
+            Die Benutzeroberfläche wurde mit
+            <strong>PyQt5</strong> entwickelt und stellt die
+            wichtigsten Funktionen des Testsystems zentral
+            zur Verfügung.
+
+        </p>
+
+
+        <p>
+
             Für bis zu sechs Sensoren werden jeweils Sensortyp,
             Seriennummer, COM-Port und aktueller Distanzwert
             angezeigt.
+
         </p>
 
+
         <p>
+
             Über separate Schaltflächen können einzelne Sensoren
             getestet oder komplette Testläufe für alle erkannten
             Sensoren gestartet werden.
+
         </p>
 
+
         <p>
+
             Ein integriertes Log- und Reportfenster ermöglicht
-            zusätzlich die Anzeige der detaillierten
+            zusätzlich die Anzeige detaillierter
             Testergebnisse.
+
         </p>
 
     </section>
@@ -949,31 +1123,45 @@
             IHK-Facharbeit
         </h2>
 
+
         <p>
+
             Das Projekt entstand im Rahmen meiner
             <strong>IHK-Facharbeit zum Fachinformatiker für
             Anwendungsentwicklung</strong>.
+
         </p>
 
-        <p>
-            Dabei wurden Anforderungen analysiert, eine
-            technische Lösung entwickelt und anschließend
-            implementiert und getestet.
-        </p>
 
         <p>
+
+            Dabei wurden zunächst die fachlichen und technischen
+            Anforderungen analysiert. Auf dieser Grundlage wurde
+            eine geeignete Softwarearchitektur entwickelt und
+            anschließend schrittweise implementiert und getestet.
+
+        </p>
+
+
+        <p>
+
             Neben der eigentlichen Programmierung waren auch
             Themen wie Softwarearchitektur, Schnittstellen,
-            Testautomatisierung, Fehlerbehandlung und
-            Dokumentation Bestandteil des Projekts.
+            Hardware-Kommunikation, Testautomatisierung,
+            Fehlerbehandlung und Dokumentation Bestandteil
+            des Projekts.
+
         </p>
 
+
         <p>
-            Die Entwicklung bot dabei die Möglichkeit, ein
-            reales technisches Problem mit einer eigenständigen
-            Softwarelösung abzubilden und die Anwendung
-            anschließend systematisch zu testen.
+
+            Die Facharbeit wurde mit der
+            <strong>Abschlussnote 2</strong>
+            bewertet.
+
         </p>
+
 
     </section>
 
@@ -989,55 +1177,89 @@
             Was ich dabei gelernt habe
         </h2>
 
+
         <ul class="project-learning-list">
 
+
             <li>
+
                 Entwicklung grafischer Benutzeroberflächen
                 mit Python und PyQt5
+
             </li>
 
+
             <li>
+
                 Strukturierung einer größeren Python-Anwendung
                 in mehrere Module
+
             </li>
 
+
             <li>
+
                 Umgang mit Hardware-Schnittstellen und
                 COM-Ports
+
             </li>
 
-            <li>
-                Verarbeitung von Sensordaten und Metadaten
-            </li>
 
             <li>
+
+                Verarbeitung von Sensordaten und technischen
+                Metadaten
+
+            </li>
+
+
+            <li>
+
                 Verwaltung von Sensorinstanzen über eine
                 zentrale Registry
+
             </li>
 
+
             <li>
+
                 Entwicklung automatisierter Tests mit Pytest
+
             </li>
 
-            <li>
-                Verarbeitung von Testresultaten und
-                Erstellung von Reports
-            </li>
 
             <li>
+
                 Kommunikation zwischen GUI und separaten
                 Testprozessen
+
             </li>
 
+
             <li>
+
+                Verarbeitung von Testresultaten und
+                Erstellung von Reports
+
+            </li>
+
+
+            <li>
+
                 Entwicklung einer Hardwaresimulation zur
                 unabhängigen Ausführung der Anwendung
+
             </li>
 
+
             <li>
-                Planung, Implementierung und Dokumentation
-                eines vollständigen IHK-Projekts
+
+                Planung, Implementierung, Test und
+                Dokumentation eines vollständigen
+                IHK-Projekts
+
             </li>
+
 
         </ul>
 
@@ -1055,11 +1277,14 @@
             Quellcode
         </h2>
 
+
         <p>
+
             Der Quellcode des Projekts befindet sich auf GitHub.
             Die aktuelle Version enthält zusätzlich eine
             Sensorsimulation, sodass die Anwendung auch ohne
             angeschlossene Hardware ausgeführt werden kann.
+
         </p>
 
 
@@ -1080,7 +1305,8 @@
          ZURÜCK
     ====================================== -->
 
-    <a href="projects.html" class="back-link">
+    <a href="projects.html"
+       class="back-link">
 
         ← Zurück zur Projektübersicht
 

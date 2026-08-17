@@ -20,7 +20,6 @@
 }
 
 
-
 /* =========================================================
    ABOUT HEADER
 ========================================================= */
@@ -30,6 +29,35 @@
     width: 100%;
 
     padding: 38px 45px;
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    border-radius: 16px;
+
+    background: transparent;
+
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+
+    transition:
+        background 0.35s ease,
+        backdrop-filter 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+.about-header:hover {
+
+    background: rgba(20, 24, 31, 0.32);
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    border-color: rgba(56, 189, 248, 0.25);
+
+    box-shadow:
+        0 0 18px rgba(56, 189, 248, 0.10);
 }
 
 
@@ -45,7 +73,6 @@
 }
 
 
-
 /* =========================================================
    CATEGORY
 ========================================================= */
@@ -55,7 +82,7 @@
     margin-bottom: 12px;
 
     color:
-        rgba(56,189,248,0.75);
+        rgba(56, 189, 248, 0.75);
 
     font-size: 11px;
 
@@ -63,7 +90,6 @@
 
     text-transform: uppercase;
 }
-
 
 
 /* =========================================================
@@ -86,7 +112,6 @@
 }
 
 
-
 /* =========================================================
    SUBTITLE
 ========================================================= */
@@ -98,13 +123,12 @@
     margin: 0;
 
     color:
-        rgba(255,255,255,0.65);
+        rgba(255, 255, 255, 0.65);
 
     font-size: 15px;
 
     line-height: 1.7;
 }
-
 
 
 /* =========================================================
@@ -127,33 +151,47 @@
 
     min-height: 0;
 
-    border: 1px solid rgba(255,255,255,0.10);
+    border: 1px solid rgba(255, 255, 255, 0.10);
 
     border-radius: 12px;
 
-    background: rgba(255,255,255,0.015);
+    /*
+       WICHTIG:
+       Normalzustand vollständig transparent.
+       Kein Blur und kein Hintergrund.
+    */
+
+    background: transparent;
+
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
 
     transition:
+        background 0.35s ease,
+        backdrop-filter 0.35s ease,
         border-color 0.25s ease,
-        background 0.25s ease;
+        box-shadow 0.25s ease;
 }
-
 
 
 /* =========================================================
    NORMAL CARD HOVER
-   Normale Cards bewegen sich NICHT
 ========================================================= */
 
 .about-card:hover {
 
-    border-color:
-        rgba(56,189,248,0.30);
-
     background:
-        rgba(255,255,255,0.025);
-}
+        rgba(20, 24, 31, 0.32);
 
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    border-color:
+        rgba(56, 189, 248, 0.30);
+
+    box-shadow:
+        0 0 18px rgba(56, 189, 248, 0.10);
+}
 
 
 /* =========================================================
@@ -178,7 +216,6 @@
 }
 
 
-
 /* =========================================================
    CARD TEXT
 ========================================================= */
@@ -188,7 +225,7 @@
     margin: 0;
 
     color:
-        rgba(255,255,255,0.72);
+        rgba(255, 255, 255, 0.72);
 
     font-size: 14px;
 
@@ -202,7 +239,6 @@
 }
 
 
-
 /* =========================================================
    TECHNICAL TERMS
 ========================================================= */
@@ -210,11 +246,10 @@
 .tech-text {
 
     color:
-        rgba(56,189,248,0.85);
+        rgba(56, 189, 248, 0.85);
 
     font-weight: 400;
 }
-
 
 
 /* =========================================================
@@ -234,7 +269,6 @@
 }
 
 
-
 /* =========================================================
    ABOUT GRID CARDS
 ========================================================= */
@@ -252,7 +286,7 @@
 .about-grid .about-card > p {
 
     color:
-        rgba(255,255,255,0.65);
+        rgba(255, 255, 255, 0.65);
 
     font-size: 13px;
 
@@ -260,10 +294,8 @@
 }
 
 
-
 /* =========================================================
-   CLICKABLE CARD
-   Nur verlinkte Cards bewegen sich
+   CLICKABLE ABOUT CARDS
 ========================================================= */
 
 .about-card-link {
@@ -275,10 +307,11 @@
     color: inherit;
 
     transition:
+        transform 0.25s ease,
+        background 0.35s ease,
+        backdrop-filter 0.35s ease,
         border-color 0.25s ease,
-        background 0.25s ease,
-        box-shadow 0.25s ease,
-        transform 0.25s ease;
+        box-shadow 0.25s ease;
 }
 
 
@@ -287,16 +320,19 @@
     transform:
         translateY(-3px);
 
-    border-color:
-        rgba(56,189,248,0.45);
-
     background:
-        rgba(255,255,255,0.025);
+        rgba(20, 24, 31, 0.32);
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    border-color:
+        rgba(56, 189, 248, 0.45);
 
     box-shadow:
-        0 8px 25px rgba(0,0,0,0.25);
+        0 8px 25px rgba(0, 0, 0, 0.25),
+        0 0 18px rgba(56, 189, 248, 0.10);
 }
-
 
 
 /* =========================================================
@@ -312,6 +348,27 @@
     object-fit: contain;
 
     margin-bottom: 8px;
+
+    opacity: 0.7;
+
+    filter: grayscale(50%);
+
+    transition:
+        opacity 0.25s ease,
+        filter 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.about-card:hover .about-logo {
+
+    opacity: 1;
+
+    filter:
+        grayscale(0%)
+        drop-shadow(
+            0 0 10px rgba(56, 189, 248, 0.22)
+        );
 }
 
 
@@ -339,7 +396,6 @@
 }
 
 
-
 /* =========================================================
    FEATURE GRID
 ========================================================= */
@@ -359,7 +415,6 @@
 }
 
 
-
 /* =========================================================
    FEATURE
 ========================================================= */
@@ -368,31 +423,45 @@
 
     padding: 24px 22px;
 
-    border: 1px solid rgba(255,255,255,0.10);
+    border: 1px solid rgba(255, 255, 255, 0.10);
 
     border-radius: 12px;
 
-    background: rgba(255,255,255,0.015);
+    /*
+       Auch Features sind im Normalzustand
+       vollständig transparent.
+    */
+
+    background: transparent;
+
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
 
     transition:
+        background 0.35s ease,
+        backdrop-filter 0.35s ease,
         border-color 0.25s ease,
-        background 0.25s ease;
+        box-shadow 0.25s ease;
 }
-
 
 
 /* =========================================================
    FEATURE HOVER
-   Auch diese Kacheln bleiben statisch
 ========================================================= */
 
 .about-feature:hover {
 
-    border-color:
-        rgba(56,189,248,0.30);
-
     background:
-        rgba(255,255,255,0.025);
+        rgba(20, 24, 31, 0.32);
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    border-color:
+        rgba(56, 189, 248, 0.30);
+
+    box-shadow:
+        0 0 18px rgba(56, 189, 248, 0.10);
 }
 
 
@@ -417,13 +486,12 @@
     margin: 0;
 
     color:
-        rgba(255,255,255,0.65);
+        rgba(255, 255, 255, 0.65);
 
     font-size: 13px;
 
     line-height: 1.7;
 }
-
 
 
 /* =========================================================
@@ -446,7 +514,6 @@
 }
 
 
-
 /* =========================================================
    BUTTON
 ========================================================= */
@@ -459,12 +526,12 @@
 
     padding: 12px 28px;
 
-    border: 1px solid rgba(255,255,255,0.14);
+    border: 1px solid rgba(255, 255, 255, 0.14);
 
     border-radius: 10px;
 
     background:
-        rgba(255,255,255,0.03);
+        rgba(255, 255, 255, 0.03);
 
     color: #ffffff;
 
@@ -487,18 +554,17 @@
 .about-button:hover {
 
     background:
-        rgba(255,255,255,0.07);
+        rgba(255, 255, 255, 0.07);
 
     border-color:
-        rgba(56,189,248,0.45);
+        rgba(56, 189, 248, 0.45);
 
     box-shadow:
-        0 0 18px rgba(56,189,248,0.14);
+        0 0 18px rgba(56, 189, 248, 0.14);
 
     transform:
         translateY(-2px);
 }
-
 
 
 /* =========================================================
@@ -521,6 +587,14 @@
     }
 
 
+    .about-header-content {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
     .about-grid {
 
         grid-template-columns:
@@ -535,7 +609,6 @@
     }
 
 }
-
 
 
 /* =========================================================
@@ -557,6 +630,12 @@
 
         padding:
             30px 22px;
+    }
+
+
+    .about-header-content {
+
+        gap: 20px;
     }
 
 

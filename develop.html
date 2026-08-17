@@ -1,124 +1,338 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Development – Matthias Schott">
 
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <link rel="preload" href="images/bg.jpg" as="image" fetchpriority="high">
-    <link rel="icon" href="images/favicon.ico">
+    <meta name="description"
+          content="Development – Matthias Schott">
 
-    <title>Development – Matthias Schott</title>
+    <link rel="stylesheet"
+          href="css/style.css">
+
+    <link rel="stylesheet"
+          href="css/about-detail.css">
+
+    <link rel="preload"
+          href="images/bg.jpg"
+          as="image"
+          fetchpriority="high">
+
+    <link rel="icon"
+          href="images/favicon.ico">
+
+    <title>
+        Development – Matthias Schott
+    </title>
+
 </head>
 
+
 <body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
 
 <header class="top-bar">
 
     <div class="title">
+
         Portfolio
-        <span>Matthias Schott</span>
+
+        <span>
+            Matthias Schott
+        </span>
+
     </div>
 
+
     <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html" class="active">Über mich</a>
-        <a href="projects.html">Projekte</a>
-        <a href="vlab.html">vLab</a>
-        <a href="skills.html">Skills</a>
-        <a href="contact.html">Kontakt</a>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="about.html"
+           class="active">
+            Über mich
+        </a>
+
+        <a href="projects.html">
+            Projekte
+        </a>
+
+        <a href="vlab.html">
+            vLab
+        </a>
+
+        <a href="skills.html">
+            Skills
+        </a>
+
+        <a href="contact.html">
+            Kontakt
+        </a>
+
     </nav>
 
 </header>
 
-<main class="about-section">
 
-    <div class="about-container">
 
-        <section class="about-intro-card glass">
+<!-- =========================================================
+     SCROLL AREA
+========================================================= -->
 
-            <div style="text-align:center; margin-bottom:30px;">
+<div class="scroll-area">
 
-                <img src="images/netcore.svg"
-                     alt=".NET"
-                     class="logo about-logo logo-aspnet">
+
+<main class="about-detail">
+
+
+    <!-- =====================================
+         HEADER
+    ====================================== -->
+
+    <section class="about-header">
+
+        <div class="about-header-content">
+
+            <div>
+
+                <p class="about-category">
+
+                    DEVELOPMENT · SOFTWARE · WEB
+
+                </p>
+
+
+                <h1>
+
+                    Development
+
+                </h1>
+
+
+                <p class="about-subtitle">
+
+                    Entwicklung praxisnaher Anwendungen
+                    mit
+                    <span class="tech">C#</span>,
+                    <span class="tech">ASP.NET Core</span>,
+                    <span class="tech">REST-APIs</span>,
+                    <span class="tech">Entity Framework</span>
+                    und modernen Webtechnologien.
+
+                </p>
 
             </div>
 
-            <h1 class="about-title">
-                Development
-            </h1>
+        </div>
 
-            <p class="about-text">
-                Mein Entwicklungsschwerpunkt liegt im Microsoft-Ökosystem
-                mit C#, ASP.NET Core und modernen Webtechnologien.
-                Dabei konzentriere ich mich auf die Entwicklung
-                praxisnaher Anwendungen mit direktem Bezug zu
-                IT-Infrastruktur, Administration und Automatisierung.
-            </p>
+    </section>
 
-            <p class="about-text">
-                Ein besonderer Fokus liegt auf der Entwicklung von
-                Webanwendungen und REST-APIs, die administrative
-                Prozesse vereinfachen und technische Abläufe
-                effizienter gestalten.
-            </p>
 
-            <p class="about-text">
-                Viele meiner Projekte verfolgen das Ziel,
-                wiederkehrende Aufgaben zu automatisieren,
-                Informationen zentral bereitzustellen oder
-                Infrastrukturkomponenten über moderne Weboberflächen
-                zugänglich zu machen.
-            </p>
 
-            <p class="about-text">
-                Für die Umsetzung nutze ich hauptsächlich
-                ASP.NET Core, Entity Framework sowie aktuelle
-                Webtechnologien. Dabei lege ich Wert auf
-                saubere Architekturen, nachvollziehbare
-                Code-Strukturen und eine langfristig
-                wartbare Entwicklung.
-            </p>
+    <!-- =====================================
+         BESCHREIBUNG
+    ====================================== -->
 
-            <p class="about-text">
-                Die Versionsverwaltung erfolgt über Git und GitHub.
-                Dadurch können Projekte strukturiert entwickelt,
-                dokumentiert und kontinuierlich erweitert werden.
-            </p>
+    <section class="about-card">
 
-            <p class="about-text">
-                Für Deployment und Hosting nutze ich Microsoft Azure.
-                Anwendungen werden beispielsweise über Azure Static
-                Web Apps oder weitere Azure-Dienste bereitgestellt,
-                wodurch moderne Entwicklungs- und Deploymentprozesse
-                bereits früh Bestandteil meiner Projekte sind.
-            </p>
-        
-        </section>
-        <a href="about.html" class="back-link">
-        ← Zurück
-        </a>
-    </div>
 
+        <div class="about-logo-container">
+
+            <img src="images/netcore.svg"
+                 alt=".NET"
+                 class="about-logo logo-aspnet">
+
+        </div>
+
+
+        <h2>
+
+            Entwicklung
+
+        </h2>
+
+
+        <p>
+
+            Mein Entwicklungsschwerpunkt liegt im
+            <span class="tech">
+                Microsoft-Ökosystem
+            </span>
+            mit
+            <span class="tech">
+                C#
+            </span>,
+            <span class="tech">
+                ASP.NET Core
+            </span>
+            und modernen Webtechnologien.
+
+        </p>
+
+
+        <p>
+
+            Dabei konzentriere ich mich auf die Entwicklung
+            praxisnaher Anwendungen mit direktem Bezug zu
+            IT-Infrastruktur, Administration und
+            Automatisierung.
+
+        </p>
+
+
+        <p>
+
+            Ein besonderer Fokus liegt auf der Entwicklung
+            von
+            <span class="tech">
+                Webanwendungen
+            </span>
+            und
+            <span class="tech">
+                REST-APIs
+            </span>,
+            die administrative Prozesse vereinfachen und
+            technische Abläufe effizienter gestalten.
+
+        </p>
+
+
+        <p>
+
+            Viele meiner Projekte verfolgen das Ziel,
+            wiederkehrende Aufgaben zu automatisieren,
+            Informationen zentral bereitzustellen oder
+            Infrastrukturkomponenten über moderne
+            Weboberflächen zugänglich zu machen.
+
+        </p>
+
+
+        <p>
+
+            Für die Umsetzung nutze ich hauptsächlich
+            <span class="tech">
+                ASP.NET Core
+            </span>,
+            <span class="tech">
+                Entity Framework
+            </span>
+            sowie aktuelle Webtechnologien.
+
+        </p>
+
+
+        <p>
+
+            Dabei lege ich Wert auf saubere Architekturen,
+            nachvollziehbare Code-Strukturen und eine
+            langfristig wartbare Entwicklung.
+
+        </p>
+
+
+        <p>
+
+            Die Versionsverwaltung erfolgt über
+            <span class="tech">
+                Git
+            </span>
+            und
+            <span class="tech">
+                GitHub
+            </span>.
+            Dadurch können Projekte strukturiert entwickelt,
+            dokumentiert und kontinuierlich erweitert werden.
+
+        </p>
+
+
+        <p>
+
+            Für Deployment und Hosting nutze ich
+            <span class="tech">
+                Microsoft Azure
+            </span>.
+            Anwendungen werden beispielsweise über
+            <span class="tech">
+                Azure Static Web Apps
+            </span>
+            oder weitere Azure-Dienste bereitgestellt.
+
+        </p>
+
+
+    </section>
+
+
+
+    <!-- =====================================
+         ZURÜCK
+    ====================================== -->
+
+    <a href="about.html"
+       class="back-link">
+
+        ← Zurück zu Über mich
+
+    </a>
+
+
+</main>
+
+</div>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
 
 <footer class="bottom-bar">
 
     <div></div>
 
+
     <div class="footer-links">
-        <a href="impressum.html">Impressum</a>
+
+        <a href="impressum.html">
+
+            Impressum
+
+        </a>
+
+
         <span class="divider"></span>
-        <a href="datenschutz.html">Datenschutz</a>
+
+
+        <a href="datenschutz.html">
+
+            Datenschutz
+
+        </a>
+
     </div>
 
+
     <div class="footer-right">
+
         © 2026 Matthias Schott
+
     </div>
 
 </footer>
 
+
 </body>
+
 </html>

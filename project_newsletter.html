@@ -88,9 +88,9 @@
 
 
 
-<!-- =========================================
+<!-- =========================================================
      SCROLLBEREICH
-========================================= -->
+========================================================= -->
 
 <div class="scroll-area">
 
@@ -140,10 +140,17 @@
                 <p class="project-subtitle">
 
                     Entwicklung eines eigenen Fullstack-
-                    Newsletter-Systems mit HTML, CSS,
-                    JavaScript, .NET 8, Azure Functions,
-                    Entity Framework Core, Azure SQL,
-                    SendGrid und GitHub Actions.
+                    Newsletter-Systems mit
+                    <span class="tech">HTML</span>,
+                    <span class="tech">CSS</span>,
+                    <span class="tech">JavaScript</span>,
+                    <span class="tech">.NET 8</span>,
+                    <span class="tech">Azure Functions</span>,
+                    <span class="tech">Entity Framework Core</span>,
+                    <span class="tech">Azure SQL</span>,
+                    <span class="tech">SendGrid</span>
+                    und
+                    <span class="tech">GitHub Actions</span>.
 
                 </p>
 
@@ -233,8 +240,9 @@
             Besucher können sich über ein Webformular für den
             Newsletter registrieren. Die E-Mail-Adresse wird
             zunächst in der Datenbank gespeichert und anschließend
-            über die SendGrid API eine individuelle
-            Bestätigungsmail versendet.
+            über die
+            <span class="tech">SendGrid API</span>
+            eine individuelle Bestätigungsmail versendet.
 
         </p>
 
@@ -264,10 +272,15 @@
         <p>
 
             Das Backend wurde zunächst als klassische
-            ASP.NET-Core-Web-API auf einem Azure App Service
+            <span class="tech">ASP.NET Core Web API</span>
+            auf einem
+            <span class="tech">Azure App Service</span>
             betrieben. Im weiteren Verlauf wurde die Anwendung
             auf eine serverlose Architektur mit
-            <strong>Azure Functions im Flex Consumption Modell</strong>
+            <strong>
+                <span class="tech">Azure Functions</span>
+                im Flex Consumption Modell
+            </strong>
             migriert.
 
         </p>
@@ -339,7 +352,8 @@
 
                 <p>
 
-                    Der Bestätigungslink ruft eine HTTP-Function
+                    Der Bestätigungslink ruft eine
+                    <span class="tech">HTTP-Function</span>
                     auf. Der Token wird geprüft und der Teilnehmer
                     anschließend als bestätigt gespeichert.
 
@@ -395,7 +409,7 @@
 
                     Der Versand der Bestätigungs-, Willkommens-
                     und Newslettermails erfolgt über die
-                    SendGrid API.
+                    <span class="tech">SendGrid API</span>.
 
                 </p>
 
@@ -411,10 +425,11 @@
 
                 <p>
 
-                    Die SendNewsletter-Function fragt alle
-                    bestätigten Teilnehmer aus der Datenbank ab
-                    und versendet den Newsletter an diese
-                    Adressen.
+                    Die
+                    <span class="tech">SendNewsletter-Function</span>
+                    fragt alle bestätigten Teilnehmer aus der
+                    Datenbank ab und versendet den Newsletter an
+                    diese Adressen.
 
                 </p>
 
@@ -430,10 +445,11 @@
 
                 <p>
 
-                    Ein separater GitHub-Actions-Workflow kann
-                    einen Newsletter unabhängig vom Backend-
-                    Deployment auslösen und Projektdaten an
-                    die Newsletter-API übergeben.
+                    Ein separater
+                    <span class="tech">GitHub-Actions-Workflow</span>
+                    kann einen Newsletter unabhängig vom Backend-
+                    Deployment auslösen und Projektdaten an die
+                    Newsletter-API übergeben.
 
                 </p>
 
@@ -472,8 +488,6 @@
         <div class="gallery-grid">
 
 
-            <!-- Bild 1 -->
-
             <button class="gallery-item"
                     data-image="images/projects/newsletter/frontend.png"
                     data-title="Newsletter-Frontend">
@@ -484,8 +498,6 @@
             </button>
 
 
-
-            <!-- Bild 2 -->
 
             <button class="gallery-item"
                     data-image="images/projects/newsletter/frontend2.png"
@@ -498,8 +510,6 @@
 
 
 
-            <!-- Bild 3 -->
-
             <button class="gallery-item"
                     data-image="images/projects/newsletter/willkommensmail.png"
                     data-title="Willkommensmail">
@@ -510,8 +520,6 @@
             </button>
 
 
-
-            <!-- Bild 4 -->
 
             <button class="gallery-item"
                     data-image="images/projects/newsletter/erfolgreich.png"
@@ -524,8 +532,6 @@
 
 
 
-            <!-- Bild 5 -->
-
             <button class="gallery-item"
                     data-image="images/projects/newsletter/Datenbank.png"
                     data-title="Datenbank">
@@ -536,8 +542,6 @@
             </button>
 
 
-
-            <!-- Bild 6 -->
 
             <button class="gallery-item"
                     data-image="images/projects/newsletter/NewsletterFunction.png"
@@ -646,11 +650,14 @@
 
             Die einzelnen Komponenten sind über klar definierte
             Schnittstellen miteinander verbunden. Das Frontend
-            kommuniziert per HTTP mit den Azure Functions.
+            kommuniziert per HTTP mit den
+            <span class="tech">Azure Functions</span>.
 
-            Die Functions greifen über Entity Framework Core
-            auf die Datenbank zu und verwenden SendGrid für
-            den E-Mail-Versand.
+            Die Functions greifen über
+            <span class="tech">Entity Framework Core</span>
+            auf die Datenbank zu und verwenden
+            <span class="tech">SendGrid</span>
+            für den E-Mail-Versand.
 
         </p>
 
@@ -684,8 +691,10 @@
 
         <p>
 
-            Die ursprüngliche ASP.NET-Core-API wurde im Zuge
-            der Weiterentwicklung in einzelne Azure Functions
+            Die ursprüngliche
+            <span class="tech">ASP.NET-Core-API</span>
+            wurde im Zuge der Weiterentwicklung in einzelne
+            <span class="tech">Azure Functions</span>
             überführt.
 
         </p>
@@ -789,7 +798,10 @@
             Zusätzlich zum automatisierten Deployment des
             Backends wurde ein eigener Workflow für den
             Newsletter-Versand mit
-            <strong>GitHub Actions</strong> implementiert.
+            <strong>
+                <span class="tech">GitHub Actions</span>
+            </strong>
+            implementiert.
 
         </p>
 
@@ -848,11 +860,13 @@
 
         <p>
 
-            Die <strong>SendNewsletter</strong>-Function fragt
-            anschließend die Datenbank ab und versendet die
-            Nachricht ausschließlich an Teilnehmer, deren
-            Anmeldung über den Double-Opt-in-Prozess bestätigt
-            wurde.
+            Die
+            <strong>
+                <span class="tech">SendNewsletter</span>
+            </strong>-Function fragt anschließend die Datenbank ab
+            und versendet die Nachricht ausschließlich an
+            Teilnehmer, deren Anmeldung über den
+            Double-Opt-in-Prozess bestätigt wurde.
 
         </p>
 
@@ -878,7 +892,9 @@
         <p>
 
             Die erste Version des Backends wurde als klassische
-            ASP.NET-Core-Web-API auf einem Azure App Service
+            <span class="tech">ASP.NET-Core-Web-API</span>
+            auf einem
+            <span class="tech">Azure App Service</span>
             betrieben.
 
         </p>
@@ -897,8 +913,12 @@
         <p>
 
             Daher wurde das Backend auf eine
-            <strong>Azure Functions App im Flex Consumption
-            Modell</strong> migriert.
+            <strong>
+                <span class="tech">
+                    Azure Functions App im Flex Consumption Modell
+                </span>
+            </strong>
+            migriert.
 
         </p>
 
@@ -989,9 +1009,11 @@
         <p>
 
             Bei der Migration musste insbesondere die Struktur
-            der Controller an das Azure-Functions-Modell angepasst
-            werden. Anstelle klassischer ASP.NET-Core-Controller
-            werden HTTP-triggered Functions verwendet, die
+            der Controller an das
+            <span class="tech">Azure-Functions-Modell</span>
+            angepasst werden. Anstelle klassischer
+            ASP.NET-Core-Controller werden HTTP-triggered Functions
+            verwendet, die
             <code>HttpRequestData</code> und
             <code>HttpResponseData</code> verwenden.
 
@@ -1000,7 +1022,8 @@
 
         <p>
 
-            Die Datenzugriffsschicht mit Entity Framework Core
+            Die Datenzugriffsschicht mit
+            <span class="tech">Entity Framework Core</span>
             sowie die Services für den E-Mail-Versand konnten
             weitgehend weiterverwendet werden.
 
@@ -1027,18 +1050,25 @@
 
         <p>
 
-            Der Quellcode wird in GitHub verwaltet. Über
-            <strong>GitHub Actions</strong> wird das Backend
-            automatisch gebaut und bei Änderungen am
-            Main-Branch in die Azure Functions App deployed.
+            Der Quellcode wird in
+            <span class="tech">GitHub</span>
+            verwaltet. Über
+            <strong>
+                <span class="tech">GitHub Actions</span>
+            </strong>
+            wird das Backend automatisch gebaut und bei
+            Änderungen am Main-Branch in die
+            <span class="tech">Azure Functions App</span>
+            deployed.
 
         </p>
 
 
         <p>
 
-            Zusätzlich existiert ein separater GitHub-Actions-
-            Workflow für den automatisierten Newsletter-Versand.
+            Zusätzlich existiert ein separater
+            <span class="tech">GitHub-Actions-Workflow</span>
+            für den automatisierten Newsletter-Versand.
             Dieser kann unabhängig vom Backend-Deployment
             ausgelöst werden und übermittelt Projektdaten an
             die Newsletter-API.
@@ -1048,10 +1078,14 @@
 
         <p>
 
-            Für die Authentifizierung zwischen GitHub Actions
-            und Azure wird OpenID Connect (OIDC) verwendet.
-            Dadurch ist kein dauerhaft gespeichertes Azure-
-            Passwort oder Client-Secret im Repository notwendig.
+            Für die Authentifizierung zwischen
+            <span class="tech">GitHub Actions</span>
+            und
+            <span class="tech">Azure</span>
+            wird
+            <span class="tech">OpenID Connect (OIDC)</span>
+            verwendet. Dadurch ist kein dauerhaft gespeichertes
+            Azure-Passwort oder Client-Secret im Repository notwendig.
 
         </p>
 
@@ -1232,8 +1266,6 @@
         <div class="github-buttons">
 
 
-            <!-- BACKEND -->
-
             <a href="https://github.com/MSchottDev/Newsletter-Backend-Function"
                target="_blank"
                rel="noopener noreferrer"
@@ -1244,8 +1276,6 @@
             </a>
 
 
-
-            <!-- FRONTEND -->
 
             <a href="https://github.com/MSchottDev/Newsletter-Frontend/tree/main"
                target="_blank"
@@ -1325,7 +1355,7 @@
             aria-label="Nächstes Bild">
 
         ›
-
+        
     </button>
 
 
