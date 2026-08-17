@@ -1,0 +1,398 @@
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-section {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 120px 20px 100px;
+}
+
+
+/* =========================================================
+   CONTACT CARD
+========================================================= */
+
+.contact-card {
+    width: 100%;
+
+    max-width: 600px;
+
+    padding: 50px 45px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   CONTACT TITLE
+========================================================= */
+
+.contact-title {
+    font-size: 32px;
+
+    font-weight: 300;
+
+    letter-spacing: 0.15em;
+
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   CONTACT INTRO
+========================================================= */
+
+.contact-intro {
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================================
+   CONTACT FORM
+========================================================= */
+
+.contact-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+    text-align: left;
+}
+
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+/* =========================================================
+   FORM LABEL
+========================================================= */
+
+.form-group label {
+    font-size: 12px;
+
+    letter-spacing: 0.15em;
+
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.65);
+}
+
+
+/* =========================================================
+   INPUT / TEXTAREA
+========================================================= */
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    border-radius: 8px;
+
+    color: #ffffff;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* =========================================================
+   TEXTAREA
+========================================================= */
+
+.form-group textarea {
+    resize: vertical;
+
+    min-height: 140px;
+}
+
+
+/* =========================================================
+   INPUT / TEXTAREA FOCUS
+========================================================= */
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: rgba(56, 189, 248, 0.55);
+
+    background: rgba(255, 255, 255, 0.06);
+
+    box-shadow:
+        0 0 15px rgba(56, 189, 248, 0.12);
+}
+
+
+/* =========================================================
+   AUTOFILL
+========================================================= */
+
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+    -webkit-text-fill-color: white;
+
+    -webkit-box-shadow:
+        0 0 0 1000px rgba(20, 24, 31, 0.95) inset;
+}
+
+
+/* =========================================================
+   CONTACT BUTTON
+========================================================= */
+
+.contact-button {
+    margin-top: 15px;
+
+    padding: 12px 30px;
+
+    align-self: center;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    border-radius: 10px;
+
+    color: #ffffff;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.15em;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        opacity 0.25s ease;
+}
+
+
+/* =========================================================
+   CONTACT BUTTON HOVER
+========================================================= */
+
+.contact-button:hover {
+    background: rgba(255, 255, 255, 0.08);
+
+    border-color: rgba(56, 189, 248, 0.45);
+
+    box-shadow:
+        0 0 18px rgba(56, 189, 248, 0.18);
+}
+
+
+/* =========================================================
+   CONTACT BUTTON DISABLED
+========================================================= */
+
+.contact-button:disabled {
+    cursor: wait;
+
+    opacity: 0.65;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    border-color: rgba(255, 255, 255, 0.15);
+
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   CONTACT SUCCESS
+========================================================= */
+
+.contact-success {
+    display: none;
+
+    margin-top: 20px;
+
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    animation:
+        contact-success-in 0.35s ease forwards;
+}
+
+
+/* =========================================================
+   SUCCESS TITLE
+========================================================= */
+
+.contact-success h2 {
+    margin-bottom: 14px;
+
+    font-size: 18px;
+
+    font-weight: 300;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 10px rgba(56, 189, 248, 0.18);
+}
+
+
+/* =========================================================
+   SUCCESS TEXT
+========================================================= */
+
+.contact-success p {
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    color: rgba(255, 255, 255, 0.65);
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.contact-success.error {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+
+.contact-success.error p {
+    color: rgba(255, 180, 180, 0.85);
+}
+
+
+/* =========================================================
+   SUCCESS ANIMATION
+========================================================= */
+
+@keyframes contact-success-in {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .contact-section {
+        padding: 110px 20px 90px;
+    }
+
+
+    .contact-card {
+        padding: 40px 30px;
+    }
+
+
+    .contact-title {
+        font-size: 28px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .contact-section {
+        padding: 120px 15px 90px;
+    }
+
+
+    .contact-card {
+        padding: 35px 20px;
+    }
+
+
+    .contact-title {
+        font-size: 24px;
+
+        letter-spacing: 0.12em;
+    }
+
+
+    .contact-intro {
+        font-size: 13px;
+    }
+
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 14px;
+    }
+
+
+    .contact-button {
+        width: 100%;
+    }
+
+
+    .contact-success h2 {
+        font-size: 16px;
+    }
+
+
+    .contact-success p {
+        font-size: 13px;
+    }
+
+}

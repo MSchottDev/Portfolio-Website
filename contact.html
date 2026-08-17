@@ -1,48 +1,97 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
+
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Portfolio von Matthias Schott">
+    <meta name="description"
+          content="Portfolio von Matthias Schott">
 
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/contact.js" defer></script>
+    <link rel="stylesheet"
+          href="css/style.css">
 
-    <link rel="preload" href="images/bg.jpg" as="image" fetchpriority="high">
-    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet"
+          href="css/contact.css">
 
-    <title>Portfolio – Matthias Schott</title>
+    <script src="js/contact.js"
+            defer></script>
+
+    <link rel="preload"
+          href="images/bg.jpg"
+          as="image"
+          fetchpriority="high">
+
+    <link rel="icon"
+          href="images/favicon.ico">
+
+    <title>Kontakt – Matthias Schott</title>
+
 </head>
 
+
 <body class="landing">
+
 
 <header class="top-bar">
 
     <div class="title">
+
         Portfolio
-        <span>Matthias Schott</span>
+
+        <span>
+            Matthias Schott
+        </span>
+
     </div>
 
+
     <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">Über mich</a>
-        <a href="projects.html">Projekte</a>
-        <a href="vlab.html">vLab</a>
-        <a href="skills.html">Skills</a>
-        <a href="contact.html" class="active">Kontakt</a>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="about.html">
+            Über mich
+        </a>
+
+        <a href="projects.html">
+            Projekte
+        </a>
+
+        <a href="vlab.html">
+            vLab
+        </a>
+
+        <a href="skills.html">
+            Skills
+        </a>
+
+        <a href="contact.html"
+           class="active">
+            Kontakt
+        </a>
+
     </nav>
 
 </header>
 
+
+
 <main class="contact-section">
 
+
     <section class="contact-card glass">
+
 
         <h1 class="contact-title">
             Kontakt
         </h1>
+
 
         <p class="contact-intro">
             Sie haben eine Frage oder möchten mit mir in Kontakt treten?
@@ -50,35 +99,49 @@
         </p>
 
 
-        <form class="contact-form" id = "contactForm">
+
+        <!-- =========================================
+             KONTAKTFORMULAR
+        ========================================== -->
+
+        <form class="contact-form"
+              id="contactForm">
+
 
             <div class="form-group">
+
                 <label for="name">
                     Name
                 </label>
 
-                <input 
+                <input
                     type="text"
                     id="name"
                     name="name"
                     placeholder="Ihr Name">
+
             </div>
 
 
+
             <div class="form-group">
+
                 <label for="email">
                     E-Mail
                 </label>
 
-                <input 
+                <input
                     type="email"
                     id="email"
                     name="email"
                     placeholder="Ihre E-Mail-Adresse">
+
             </div>
 
 
+
             <div class="form-group">
+
                 <label for="message">
                     Nachricht
                 </label>
@@ -88,38 +151,80 @@
                     name="message"
                     rows="6"
                     placeholder="Ihre Nachricht"></textarea>
+
             </div>
 
 
-            <button class="contact-button" type="submit">
+
+            <button
+                class="contact-button"
+                type="submit">
+
                 Senden
+
             </button>
+
 
         </form>
 
 
-        <div class="contact-success">
-            
+
+        <!-- =========================================
+             ERFOLGSMELDUNG
+        ========================================== -->
+
+        <div class="contact-success"
+             id="contactSuccess">
+
+            <h2>
+                Nachricht erfolgreich versendet
+            </h2>
+
+            <p>
+                Vielen Dank für Ihre Nachricht.
+                Ich habe Ihre Nachricht erhalten und
+                melde mich so schnell wie möglich bei Ihnen.
+            </p>
+
         </div>
 
 
     </section>
 
+
 </main>
+
+
 
 <footer class="bottom-bar">
 
+
     <div></div>
 
+
     <div class="footer-links">
-        <a href="impressum.html">Impressum</a>
+
+        <a href="impressum.html">
+            Impressum
+        </a>
+
         <span class="divider"></span>
-        <a href="datenschutz.html">Datenschutz</a>
+
+        <a href="datenschutz.html">
+            Datenschutz
+        </a>
+
     </div>
 
-    <div class="footer-right">© 2026 Matthias Schott</div>
+
+    <div class="footer-right">
+        © 2026 Matthias Schott
+    </div>
+
 
 </footer>
 
+
 </body>
+
 </html>
